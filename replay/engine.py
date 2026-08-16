@@ -116,6 +116,7 @@ class ReplayEngine:
             self.policy.validate_origin(surface.session_manager.page.url, artifact.safety.allowed_origins)
 
             # 3. Step Loop
+            search_submitted = False
             for idx, step in enumerate(artifact.steps, start=1):
                 context.current_step_id = step.id
                 context.current_step_index = idx
@@ -123,6 +124,8 @@ class ReplayEngine:
                 # Execute step
                 step_res = await step_executor.execute_step(step, surface, validated_inputs, context.outputs)
                 steps_completed += 1
+                if step.id == "search_member":
+                    search_submitted = True
 
                 # Collect extracted variables
                 if step_res.get("extracted"):
@@ -141,9 +144,9 @@ class ReplayEngine:
                 )
 
                 # Check runtime traps and business outcome detectors only after the
-                # search has been submitted (idx >= 2), so the initial Member Inquiry
-                # form's dropdown options (e.g. "Member not found") do not false-fire.
-                if idx >= 2:
+                # search has been submitted. Demo setup steps, such as selecting the
+                # test-condition dropdown, should not be interpreted as outcomes.
+                if search_submitted:
                     post_step_obs = await surface.observe(capture_screenshot=False)
                     self._check_runtime_traps_and_outcomes(artifact, post_step_obs, validated_inputs, context.outputs, step.id)
 

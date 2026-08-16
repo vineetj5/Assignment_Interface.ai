@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import copy
 import uuid
 from pathlib import Path
 from typing import Any, Dict, Optional
 from automation.surface import PlaywrightSurface
+from capability.models import ArtifactActionType, CapabilityArtifact, CapabilityStep, FrameTarget, LocatorStrategy, TargetSpec, ValueSource
 from capability.repository import ArtifactRepository
 from handoff.action_capture import HumanActionCapture
 from handoff.cleanup import HandoffCleanup
@@ -65,6 +67,7 @@ class ReplayRunManager:
         artifact = self.repository.get_approved(capability)
         if artifact is None:
             raise ValueError(f"No approved artifact for {capability}.")
+        artifact = self._with_demo_test_condition(artifact, inputs)
         if target_url:
             artifact.entrypoint.url = target_url
             if target_url not in artifact.safety.allowed_origins:
@@ -225,6 +228,52 @@ class ReplayRunManager:
 
     def surface_for(self, run_id: str) -> Optional[PlaywrightSurface]:
         return self._surfaces.get(run_id)
+
+    def _with_demo_test_condition(self, artifact: CapabilityArtifact, inputs: Dict[str, Any]) -> CapabilityArtifact:
+        """Add a demo-only legacy test-condition selector without changing the approved artifact on disk."""
+        test_condition = inputs.get("test_condition")
+        if not test_condition or test_condition == "normal":
+            return artifact
+
+        allowed_conditions = {
+            "member_not_found",
+            "permission_denied",
+            "slow_response",
+            "session_expired",
+            "unexpected_dialog",
+            "app_error",
+        }
+        if test_condition not in allowed_conditions:
+            raise ValueError(f"Unsupported demo test_condition: {test_condition}")
+
+        demo_artifact = copy.deepcopy(artifact)
+        if ArtifactActionType.SELECT.value not in demo_artifact.safety.allowed_actions:
+            demo_artifact.safety.allowed_actions.append(ArtifactActionType.SELECT.value)
+
+        select_step = CapabilityStep(
+            id="select_demo_test_condition",
+            action=ArtifactActionType.SELECT,
+            target=TargetSpec(
+                frame_path=[FrameTarget(name="legacy-app"), FrameTarget(name="workspace")],
+                primary=LocatorStrategy(
+                    strategy="attributes",
+                    tag="select",
+                    attributes={"name": "test_condition"},
+                ),
+            ),
+            value=ValueSource(source="literal", value=test_condition),
+        )
+
+        if any(step.id == select_step.id for step in demo_artifact.steps):
+            return demo_artifact
+
+        insert_at = 1
+        for idx, step in enumerate(demo_artifact.steps):
+            if step.id == "enter_member_id":
+                insert_at = idx + 1
+                break
+        demo_artifact.steps.insert(insert_at, select_step)
+        return demo_artifact
 
     def _create_intervention(self, handle: RunHandle, result: ReplayResult) -> InterventionRequest:
         escalation = result.escalation

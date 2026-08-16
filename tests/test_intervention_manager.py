@@ -44,6 +44,23 @@ class FakeEscalatingEngine:
         )
 
 
+def test_manager_adds_demo_test_condition_step(tmp_path):
+    manager = ReplayRunManager(
+        repository=FakeRepository(),
+        replay_engine=FakeEscalatingEngine(),
+        handoff_store=HandoffStore(),
+        evidence_dir=tmp_path,
+    )
+    artifact = manager.repository.get_approved("lookup_balance")
+
+    demo_artifact = manager._with_demo_test_condition(artifact, {"test_condition": "unexpected_dialog"})
+
+    step_ids = [step.id for step in demo_artifact.steps]
+    assert step_ids == ["select_demo_test_condition"]
+    assert "select" in demo_artifact.safety.allowed_actions
+    assert artifact.steps == []
+
+
 @pytest.mark.asyncio
 async def test_manager_creates_intervention_on_escalation(tmp_path):
     manager = ReplayRunManager(
@@ -78,4 +95,3 @@ async def test_manager_claim_cancel_closes_run(tmp_path):
     result = await manager.cancel(handle.run_id, "op1")
     assert result.status == ReplayStatus.FAILED
     assert manager.get(handle.run_id).state == RunState.CANCELLED
-
