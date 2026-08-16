@@ -1,0 +1,8 @@
+{
+  "status": "needs_input",
+  "message": "What type of account would you like to check the balance for, savings or checking?",
+  "pending_capability": "lookup_balance",
+  "missing_arguments": [
+    "account_type"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "needs_input",
+  "message": "Could you please provide more context or clarify your request?",
+  "pending_capability": "lookup_balance",
+  "missing_arguments": [
+    "account_type"
+  ]
+}

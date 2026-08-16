@@ -1,0 +1,12 @@
+{
+  "status": "clarify",
+  "capability": "lookup_balance",
+  "arguments": {
+    "account_type": "savings"
+  },
+  "missing_arguments": [
+    "member_id"
+  ],
+  "clarification_question": "What member ID would you like me to look up?",
+  "reason_code": null
+}

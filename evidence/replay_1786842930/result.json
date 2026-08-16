@@ -1,0 +1,13 @@
+{
+  "status": "business_outcome",
+  "run_id": "replay_1786842930",
+  "capability": "lookup_balance",
+  "version": "1.0.0",
+  "outcome": {
+    "code": "MEMBER_NOT_FOUND",
+    "step_id": "search_member"
+  },
+  "steps_completed": 2,
+  "duration_seconds": 2.62,
+  "evidence_dir": "/Users/vineetjujjavarapu/Downloads/interface_ai_legacy_demo/evidence/replay_1786842930"
+}

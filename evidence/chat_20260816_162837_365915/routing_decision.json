@@ -1,0 +1,12 @@
+{
+  "status": "clarify",
+  "capability": "lookup_balance",
+  "arguments": {
+    "member_id": "[REDACTED]"
+  },
+  "missing_arguments": [
+    "account_type"
+  ],
+  "clarification_question": "Could you please provide more context or clarify your request?",
+  "reason_code": null
+}

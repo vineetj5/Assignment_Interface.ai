@@ -1,0 +1,48 @@
+{
+  "step": 1,
+  "observation_ref": "obs_001",
+  "model_decision": {
+    "action": "fill",
+    "target_id": "e_06",
+    "value": "12345",
+    "reasoning_summary": "The member number needs to be entered to proceed with finding the member's account information",
+    "expected_result": "The member number 12345 will be filled in the textbox",
+    "extracted_output": null,
+    "escalation_reason": null
+  },
+  "resolved_target": {
+    "observation_id": "e_06",
+    "role": "textbox",
+    "name": "Member Number",
+    "text": "",
+    "tag": "input",
+    "attributes": {
+      "name": "member_number",
+      "value": "",
+      "autocomplete": "off"
+    },
+    "frame_path": [
+      "legacy-app",
+      "workspace"
+    ],
+    "css": null
+  },
+  "action_result": {
+    "action_id": "act_001",
+    "action_type": "fill",
+    "status": "success",
+    "started_at": "2026-08-15T22:05:04.014662+00:00",
+    "completed_at": "2026-08-15T22:05:04.419277+00:00",
+    "duration_ms": 404.59,
+    "output": {
+      "filled": "12345",
+      "verified": true
+    },
+    "error": null,
+    "before_observation_ref": "obs_001",
+    "after_observation_ref": "obs_002",
+    "screenshot_ref": "screenshots/obs_002.png"
+  },
+  "extracted_output": null,
+  "timestamp": "2026-08-15T22:05:04.484352+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "needs_input",
+  "message": "What member ID would you like me to look up?",
+  "pending_capability": "lookup_balance",
+  "missing_arguments": [
+    "member_id"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "message": "Member 12345's current savings balance is $1214.87.",
+  "capability": "lookup_balance",
+  "missing_arguments": [],
+  "replay_run_id": "replay_1786894165",
+  "data": {
+    "member_id": "12345",
+    "account_type": "savings",
+    "current_balance": {
+      "amount": "1214.87",
+      "currency": "USD"
+    }
+  }
+}

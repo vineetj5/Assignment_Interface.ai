@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "message": "Member 76821's current savings balance is $2039.29.",
+  "capability": "lookup_balance",
+  "missing_arguments": [],
+  "replay_run_id": "replay_1786914516",
+  "data": {
+    "member_id": "76821",
+    "account_type": "savings",
+    "current_balance": {
+      "amount": "2039.29",
+      "currency": "USD"
+    }
+  }
+}

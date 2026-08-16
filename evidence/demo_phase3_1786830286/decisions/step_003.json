@@ -1,0 +1,47 @@
+{
+  "step": 3,
+  "observation_ref": "obs_005",
+  "model_decision": {
+    "action": "click",
+    "target_id": "e_09",
+    "value": null,
+    "reasoning_summary": "Member profile loaded; clicking View for savings account.",
+    "expected_result": "Account Detail screen opened.",
+    "extracted_output": null,
+    "escalation_reason": null
+  },
+  "resolved_target": {
+    "observation_id": "e_09",
+    "role": "link",
+    "name": "View (SAV \u00b7 01 \u00b7 Regular Savings \u00b7 Active \u00b7 2026-08-14)",
+    "text": "View",
+    "tag": "a",
+    "attributes": {
+      "class": "view-link ",
+      "href": "/legacy/account/12345/savings?cond=normal",
+      "row_context": "SAV \u00b7 01 \u00b7 Regular Savings \u00b7 Active \u00b7 2026-08-14"
+    },
+    "frame_path": [
+      "legacy-app",
+      "workspace"
+    ],
+    "css": null
+  },
+  "action_result": {
+    "action_id": "act_003",
+    "action_type": "click",
+    "status": "success",
+    "started_at": "2026-08-15T21:44:47.676583+00:00",
+    "completed_at": "2026-08-15T21:44:47.812137+00:00",
+    "duration_ms": 135.55,
+    "output": {
+      "clicked": true
+    },
+    "error": null,
+    "before_observation_ref": "obs_005",
+    "after_observation_ref": "obs_006",
+    "screenshot_ref": "screenshots/obs_006.png"
+  },
+  "extracted_output": null,
+  "timestamp": "2026-08-15T21:44:47.845072+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "message": "Member 12345's current checking balance is $460.87.",
+  "capability": "lookup_balance",
+  "missing_arguments": [],
+  "replay_run_id": "replay_1786891516",
+  "data": {
+    "member_id": "12345",
+    "account_type": "checking",
+    "current_balance": {
+      "amount": "460.87",
+      "currency": "USD"
+    }
+  }
+}

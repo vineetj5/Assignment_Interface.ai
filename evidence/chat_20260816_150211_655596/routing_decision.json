@@ -1,0 +1,12 @@
+{
+  "status": "clarify",
+  "capability": "lookup_balance",
+  "arguments": {
+    "member_id": "[REDACTED]"
+  },
+  "missing_arguments": [
+    "account_type"
+  ],
+  "clarification_question": "What type of account would you like to check the balance for, savings or checking?",
+  "reason_code": null
+}

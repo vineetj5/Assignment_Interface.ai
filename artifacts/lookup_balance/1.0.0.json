@@ -1,0 +1,372 @@
+{
+  "schema_version": "1",
+  "identity": {
+    "name": "lookup_balance",
+    "version": "1.0.0",
+    "description": "Look up a member and return the current balance for a savings or checking account.",
+    "status": "approved"
+  },
+  "inputs": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "Credit union member identifier (numeric digits).",
+      "validation": {
+        "pattern": "^\\d+$",
+        "min_length": 4,
+        "max_length": 10
+      },
+      "sensitive": true
+    },
+    {
+      "name": "account_type",
+      "type": "enum",
+      "required": true,
+      "description": "Account type category to inspect.",
+      "values": [
+        "savings",
+        "checking"
+      ],
+      "sensitive": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "description": "Verified member number."
+    },
+    {
+      "name": "account_type",
+      "type": "enum",
+      "description": "Account category.",
+      "values": [
+        "savings",
+        "checking"
+      ]
+    },
+    {
+      "name": "current_balance",
+      "type": "money",
+      "description": "Current account balance amount and currency.",
+      "schema_def": {
+        "amount": {
+          "type": "decimal"
+        },
+        "currency": {
+          "type": "string"
+        }
+      }
+    }
+  ],
+  "entrypoint": {
+    "url": "http://127.0.0.1:8000"
+  },
+  "steps": [
+    {
+      "id": "enter_member_id",
+      "action": "fill",
+      "target": {
+        "frame_path": [
+          {
+            "name": "legacy-app"
+          },
+          {
+            "name": "workspace"
+          }
+        ],
+        "primary": {
+          "strategy": "role_name",
+          "role": "textbox",
+          "name": "Member Number"
+        },
+        "fallbacks": [
+          {
+            "strategy": "label",
+            "value": "Member Number"
+          },
+          {
+            "strategy": "attributes",
+            "attributes": {
+              "name": "member_number"
+            }
+          }
+        ]
+      },
+      "value": {
+        "source": "input",
+        "name": "member_id"
+      },
+      "postconditions": [
+        {
+          "type": "input_value_equals",
+          "expected": {
+            "source": "input",
+            "name": "member_id"
+          }
+        }
+      ],
+      "on_conditions": []
+    },
+    {
+      "id": "search_member",
+      "action": "click",
+      "target": {
+        "frame_path": [
+          {
+            "name": "legacy-app"
+          },
+          {
+            "name": "workspace"
+          }
+        ],
+        "primary": {
+          "strategy": "role_name",
+          "role": "button",
+          "name": "Find Member"
+        },
+        "fallbacks": [
+          {
+            "strategy": "label",
+            "value": "Find Member"
+          }
+        ]
+      },
+      "wait_after": {
+        "type": "any_of",
+        "conditions": [
+          {
+            "type": "text_visible",
+            "value": "Member loaded.",
+            "timeout_ms": 5000
+          },
+          {
+            "type": "text_visible",
+            "value": "Member not found",
+            "timeout_ms": 5000
+          },
+          {
+            "type": "text_visible",
+            "value": "Permission denied",
+            "timeout_ms": 5000
+          }
+        ],
+        "timeout_ms": 5000
+      },
+      "postconditions": [
+        {
+          "type": "field_equals",
+          "expected": {
+            "source": "input",
+            "name": "member_id"
+          },
+          "field": {
+            "strategy": "table_field",
+            "table": "MEMBER PROFILE",
+            "field": "Member Number"
+          }
+        }
+      ],
+      "on_conditions": []
+    },
+    {
+      "id": "open_account",
+      "action": "click",
+      "target": {
+        "frame_path": [
+          {
+            "name": "legacy-app"
+          },
+          {
+            "name": "workspace"
+          }
+        ],
+        "primary": {
+          "strategy": "table_row_action",
+          "table": "SHARE / DRAFT ACCOUNTS",
+          "row_match": {
+            "column": "Type",
+            "value": {
+              "source": "input_map",
+              "name": null,
+              "input": "account_type",
+              "mapping": {
+                "savings": "SAV",
+                "checking": "DDA"
+              },
+              "value": null,
+              "step_id": null
+            }
+          },
+          "action_control": {
+            "role": "link",
+            "name": "View"
+          }
+        },
+        "fallbacks": [
+          {
+            "strategy": "role_name",
+            "role": "link",
+            "name": "View"
+          },
+          {
+            "strategy": "text"
+          }
+        ]
+      },
+      "wait_after": {
+        "type": "text_visible",
+        "value": "Account Detail",
+        "timeout_ms": 5000
+      },
+      "postconditions": [],
+      "on_conditions": []
+    },
+    {
+      "id": "extract_current_balance",
+      "action": "extract",
+      "target": {
+        "frame_path": [
+          {
+            "name": "legacy-app"
+          },
+          {
+            "name": "workspace"
+          }
+        ],
+        "primary": {
+          "strategy": "field_by_label",
+          "label": "Current Balance"
+        },
+        "fallbacks": [
+          {
+            "strategy": "css",
+            "css": ".balance-value"
+          },
+          {
+            "strategy": "attributes",
+            "attributes": {
+              "class": "balance-value"
+            }
+          }
+        ]
+      },
+      "postconditions": [],
+      "extraction": {
+        "output": "current_balance",
+        "transform": {
+          "type": "parse_currency",
+          "default_currency": "USD"
+        }
+      },
+      "on_conditions": []
+    }
+  ],
+  "success_condition": {
+    "type": "all_of",
+    "conditions": [
+      {
+        "type": "member_matches_input",
+        "input": "member_id"
+      },
+      {
+        "type": "account_matches_input",
+        "input": "account_type"
+      },
+      {
+        "type": "output_present",
+        "output": "current_balance"
+      }
+    ]
+  },
+  "business_outcomes": [
+    {
+      "code": "MEMBER_NOT_FOUND",
+      "category": "business_outcome",
+      "detect": {
+        "type": "text_matches",
+        "pattern": "Member not found"
+      },
+      "description": "The requested member identifier was not found in the servicing database."
+    },
+    {
+      "code": "ACCOUNT_NOT_FOUND",
+      "category": "business_outcome",
+      "detect": {
+        "type": "table_row_missing",
+        "table": "SHARE / DRAFT ACCOUNTS",
+        "column": "Type"
+      },
+      "description": "The requested account type (savings/checking) does not exist for this member."
+    }
+  ],
+  "runtime_conditions": [
+    {
+      "code": "PERMISSION_DENIED",
+      "category": "hard_failure",
+      "detect": {
+        "type": "text_matches",
+        "pattern": "Permission denied"
+      },
+      "description": "Servicing user does not have permission to view this member profile."
+    },
+    {
+      "code": "SESSION_EXPIRED",
+      "category": "hard_failure",
+      "detect": {
+        "type": "text_matches",
+        "pattern": "Session expired"
+      },
+      "description": "Legacy session has timed out and requires re-authentication."
+    },
+    {
+      "code": "VERIFICATION_REQUIRED",
+      "category": "escalate",
+      "detect": {
+        "type": "dialog_matches",
+        "pattern": "Verification"
+      },
+      "description": "Step-up verification modal encountered requiring human intervention."
+    },
+    {
+      "code": "APPLICATION_ERROR",
+      "category": "hard_failure",
+      "detect": {
+        "type": "text_matches",
+        "pattern": "Application error"
+      },
+      "description": "Legacy application returned an unexpected 500/unhandled error page."
+    }
+  ],
+  "safety": {
+    "risk_class": "read_only",
+    "allowed_actions": [
+      "fill",
+      "click",
+      "extract",
+      "wait",
+      "navigate"
+    ],
+    "allowed_origins": [
+      "http://127.0.0.1:8000"
+    ],
+    "contains_sensitive_inputs": true,
+    "persist_input_values": false
+  },
+  "compatibility": {
+    "surface_type": "web",
+    "surface_adapter": "playwright",
+    "application_family": "cucore_mock",
+    "tested_versions": [
+      "8.4.12"
+    ]
+  },
+  "provenance": {
+    "created_from": "llm_discovery",
+    "discovery_run_id": "discovery_1786831501",
+    "created_at": "2026-08-16T00:12:10.878621+00:00",
+    "model_provider": "groq",
+    "model": "llama-3.3-70b-versatile"
+  }
+}

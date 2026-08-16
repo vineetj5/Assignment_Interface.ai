@@ -1,0 +1,241 @@
+{
+  "status": "success",
+  "run_id": "discovery_1786831472",
+  "goal": {
+    "goal": "What is the savings balance for member 13278?",
+    "target_url": "http://127.0.0.1:8000",
+    "max_steps": 15,
+    "timeout_seconds": 120
+  },
+  "steps_count": 5,
+  "duration_seconds": 8.15,
+  "outputs": {
+    "current_balance": "$5,521.10",
+    "member_id": "13278",
+    "account_type": "Regular Savings"
+  },
+  "stop_reason": null,
+  "error_message": null,
+  "evidence_dir": "/Users/vineetjujjavarapu/Downloads/interface_ai_legacy_demo/evidence/demo_phase3_1786831472",
+  "steps": [
+    {
+      "step": 1,
+      "observation_ref": "obs_001",
+      "model_decision": {
+        "action": "fill",
+        "target_id": "e_06",
+        "value": "13278",
+        "reasoning_summary": "The goal requires finding a member by their number, so we fill in the member number textbox with the given member ID.",
+        "expected_result": "The member number is entered into the system, preparing for the 'Find Member' button click.",
+        "extracted_output": null,
+        "escalation_reason": null
+      },
+      "resolved_target": {
+        "observation_id": "e_06",
+        "role": "textbox",
+        "name": "Member Number",
+        "text": "",
+        "tag": "input",
+        "attributes": {
+          "name": "member_number",
+          "value": "",
+          "autocomplete": "off"
+        },
+        "frame_path": [
+          "legacy-app",
+          "workspace"
+        ],
+        "css": null
+      },
+      "action_result": {
+        "action_id": "act_001",
+        "action_type": "fill",
+        "status": "success",
+        "started_at": "2026-08-15T22:04:36.121287+00:00",
+        "completed_at": "2026-08-15T22:04:36.531793+00:00",
+        "duration_ms": 410.47,
+        "output": {
+          "filled": "13278",
+          "verified": true
+        },
+        "error": null,
+        "before_observation_ref": "obs_001",
+        "after_observation_ref": "obs_002",
+        "screenshot_ref": "screenshots/obs_002.png"
+      },
+      "extracted_output": null,
+      "timestamp": "2026-08-15T22:04:36.618744+00:00"
+    },
+    {
+      "step": 2,
+      "observation_ref": "obs_003",
+      "model_decision": {
+        "action": "click",
+        "target_id": "e_07",
+        "value": null,
+        "reasoning_summary": "The member number has been filled, so the next step is to click the 'Find Member' button to retrieve the member's information.",
+        "expected_result": "The application will search for the member and display their profile information if found.",
+        "extracted_output": null,
+        "escalation_reason": null
+      },
+      "resolved_target": {
+        "observation_id": "e_07",
+        "role": "button",
+        "name": "Find Member",
+        "text": "",
+        "tag": "input",
+        "attributes": {
+          "class": "legacy-button",
+          "type": "submit",
+          "value": "Find Member",
+          "style": ""
+        },
+        "frame_path": [
+          "legacy-app",
+          "workspace"
+        ],
+        "css": null
+      },
+      "action_result": {
+        "action_id": "act_002",
+        "action_type": "click",
+        "status": "success",
+        "started_at": "2026-08-15T22:04:37.109427+00:00",
+        "completed_at": "2026-08-15T22:04:37.635569+00:00",
+        "duration_ms": 526.11,
+        "output": {
+          "clicked": true
+        },
+        "error": null,
+        "before_observation_ref": "obs_003",
+        "after_observation_ref": "obs_004",
+        "screenshot_ref": "screenshots/obs_004.png"
+      },
+      "extracted_output": null,
+      "timestamp": "2026-08-15T22:04:37.721624+00:00"
+    },
+    {
+      "step": 3,
+      "observation_ref": "obs_005",
+      "model_decision": {
+        "action": "click",
+        "target_id": "e_09",
+        "value": null,
+        "reasoning_summary": "The goal is to find the savings balance for member 13278, and the 'View' link for the Regular Savings account is available",
+        "expected_result": "The Account Detail page for the Regular Savings account will be displayed",
+        "extracted_output": null,
+        "escalation_reason": null
+      },
+      "resolved_target": {
+        "observation_id": "e_09",
+        "role": "link",
+        "name": "View (SAV \u00b7 01 \u00b7 Regular Savings \u00b7 Active \u00b7 2026-08-09)",
+        "text": "View",
+        "tag": "a",
+        "attributes": {
+          "class": "view-link ",
+          "href": "/legacy/account/13278/savings?cond=normal",
+          "row_context": "SAV \u00b7 01 \u00b7 Regular Savings \u00b7 Active \u00b7 2026-08-09"
+        },
+        "frame_path": [
+          "legacy-app",
+          "workspace"
+        ],
+        "css": null
+      },
+      "action_result": {
+        "action_id": "act_003",
+        "action_type": "click",
+        "status": "success",
+        "started_at": "2026-08-15T22:04:38.227497+00:00",
+        "completed_at": "2026-08-15T22:04:38.781518+00:00",
+        "duration_ms": 553.99,
+        "output": {
+          "clicked": true
+        },
+        "error": null,
+        "before_observation_ref": "obs_005",
+        "after_observation_ref": "obs_006",
+        "screenshot_ref": "screenshots/obs_006.png"
+      },
+      "extracted_output": null,
+      "timestamp": "2026-08-15T22:04:38.867366+00:00"
+    },
+    {
+      "step": 4,
+      "observation_ref": "obs_007",
+      "model_decision": {
+        "action": "extract",
+        "target_id": "e_06",
+        "value": null,
+        "reasoning_summary": "The current balance is displayed on the screen and needs to be extracted to fulfill the goal",
+        "expected_result": "The current balance of $5,521.10 will be extracted",
+        "extracted_output": null,
+        "escalation_reason": null
+      },
+      "resolved_target": {
+        "observation_id": "e_06",
+        "role": "",
+        "name": "Current Balance",
+        "text": "$5,521.10",
+        "tag": "td",
+        "attributes": {
+          "class": "balance-value"
+        },
+        "frame_path": [
+          "legacy-app",
+          "workspace"
+        ],
+        "css": null
+      },
+      "action_result": {
+        "action_id": "act_004",
+        "action_type": "extract",
+        "status": "success",
+        "started_at": "2026-08-15T22:04:39.353418+00:00",
+        "completed_at": "2026-08-15T22:04:39.379388+00:00",
+        "duration_ms": 25.93,
+        "output": {
+          "text": "$5,521.10",
+          "value": null
+        },
+        "error": null,
+        "before_observation_ref": "obs_007",
+        "after_observation_ref": "obs_008",
+        "screenshot_ref": "screenshots/obs_008.png"
+      },
+      "extracted_output": {
+        "current_balance": "$5,521.10"
+      },
+      "timestamp": "2026-08-15T22:04:39.418245+00:00"
+    },
+    {
+      "step": 5,
+      "observation_ref": "obs_009",
+      "model_decision": {
+        "action": "finish",
+        "target_id": null,
+        "value": null,
+        "reasoning_summary": "The savings balance for member 13278 has already been extracted, so the goal is complete.",
+        "expected_result": "Discovery completed with the extracted balance.",
+        "extracted_output": {
+          "member_id": "13278",
+          "account_type": "Regular Savings",
+          "current_balance": "$5,521.10"
+        },
+        "escalation_reason": null
+      },
+      "resolved_target": null,
+      "action_result": {
+        "status": "success",
+        "terminal": "finish"
+      },
+      "extracted_output": {
+        "current_balance": "$5,521.10",
+        "member_id": "13278",
+        "account_type": "Regular Savings"
+      },
+      "timestamp": "2026-08-15T22:04:40.173314+00:00"
+    }
+  ]
+}

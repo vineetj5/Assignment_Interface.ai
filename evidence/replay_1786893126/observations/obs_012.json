@@ -1,0 +1,273 @@
+{
+  "observation_id": "obs_012",
+  "timestamp": "2026-08-16T15:12:08.317321+00:00",
+  "page_url": "http://127.0.0.1:8000/",
+  "page_title": "Bank mock app Automation Demo",
+  "frame_hierarchy": [
+    {
+      "frame_id": "root",
+      "name": "",
+      "url": "http://127.0.0.1:8000/",
+      "parent_frame_id": null,
+      "depth": 0
+    },
+    {
+      "frame_id": "legacy-app",
+      "name": "legacy-app",
+      "url": "http://127.0.0.1:8000/legacy",
+      "parent_frame_id": "root",
+      "depth": 1
+    },
+    {
+      "frame_id": "workspace",
+      "name": "workspace",
+      "url": "http://127.0.0.1:8000/legacy/account/12345/savings?cond=normal",
+      "parent_frame_id": "legacy-app",
+      "depth": 2
+    }
+  ],
+  "interactive_elements": [
+    {
+      "observation_id": "e_01",
+      "tag": "button",
+      "role": "button",
+      "name": "Look up member 12345 and read their current savings balance",
+      "label": "Look up member 12345 and read their current savings balance",
+      "text": "Look up member 12345 and read their current savings balance",
+      "value": "",
+      "attributes": {
+        "class": "sample-request",
+        "type": "button"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 916.0,
+        "y": 562.21875,
+        "width": 342.0,
+        "height": 29.0
+      }
+    },
+    {
+      "observation_id": "e_02",
+      "tag": "button",
+      "role": "button",
+      "name": "What is member 76821's checking balance?",
+      "label": "What is member 76821's checking balance?",
+      "text": "What is member 76821's checking balance?",
+      "value": "",
+      "attributes": {
+        "class": "sample-request",
+        "type": "button"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 916.0,
+        "y": 596.21875,
+        "width": 342.0,
+        "height": 29.0
+      }
+    },
+    {
+      "observation_id": "e_03",
+      "tag": "textarea",
+      "role": "textbox",
+      "name": "Type a member balance request...",
+      "label": "Type a member balance request...",
+      "text": "",
+      "value": "",
+      "attributes": {
+        "id": "goal-input",
+        "placeholder": "Type a member balance request...",
+        "style": ""
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": true,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 916.0,
+        "y": 662.21875,
+        "width": 279.0,
+        "height": 62.0
+      }
+    },
+    {
+      "observation_id": "e_04",
+      "tag": "button",
+      "role": "button",
+      "name": "run-goal",
+      "label": "run-goal",
+      "text": "Run",
+      "value": "",
+      "attributes": {
+        "id": "run-goal",
+        "class": "run-button",
+        "type": "button"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 1202.0,
+        "y": 662.21875,
+        "width": 56.0,
+        "height": 62.0
+      }
+    },
+    {
+      "observation_id": "e_05",
+      "tag": "button",
+      "role": "button",
+      "name": "Sign Off (N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12 \u00b7 Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off)",
+      "label": "Sign Off (N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12 \u00b7 Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off)",
+      "text": "Sign Off",
+      "value": "",
+      "attributes": {
+        "type": "button",
+        "row_context": "N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12 \u00b7 Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [
+        "legacy-app"
+      ],
+      "bounding_box": {
+        "x": 798.15625,
+        "y": 13.5,
+        "width": 77.84375,
+        "height": 33.0
+      }
+    },
+    {
+      "observation_id": "e_06",
+      "tag": "td",
+      "role": "",
+      "name": "Current Balance",
+      "label": "Current Balance",
+      "text": "$1,214.87",
+      "value": "$1,214.87",
+      "attributes": {
+        "class": "balance-value"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ],
+      "bounding_box": {
+        "x": 77.75,
+        "y": 225.5,
+        "width": 355.75,
+        "height": 45.0
+      }
+    },
+    {
+      "observation_id": "e_07",
+      "tag": "button",
+      "role": "button",
+      "name": "Back to Member",
+      "label": "Back to Member",
+      "text": "Back to Member",
+      "value": "",
+      "attributes": {
+        "type": "button",
+        "onclick": "history.back()"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ],
+      "bounding_box": {
+        "x": 8.0,
+        "y": 373.0,
+        "width": 136.984375,
+        "height": 29.0
+      }
+    }
+  ],
+  "visible_text": "--- Frame: root ---\nAUTOMATION ASSISTANT\nAssistant\nSupported target workflow: member lookup \u2192 account detail \u2192 current savings/checking balance.\nDemo members: 12345, 76821, 44002\nASSISTANT\nThe legacy application is ready. Ask for an approved member balance lookup.\nTRY A REQUEST\nLook up member 12345 and read their current savings balance\nWhat is member 76821's checking balance?\nNATURAL-LANGUAGE GOAL\nRun\nEXECUTION PATH\nChat \u2192 capability router \u2192 deterministic replay \u2192 typed result\nRouting may use an LLM \u00b7 UI actions use approved artifacts only\n\n--- Frame: legacy-app ---\nN Bank mock app\nCUCORE Online \u00b7 Release 8.4.12\n\tOperator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off\n\n\nCUCORE MAIN MENU\nMEMBER\n\u203a\u00a0 Member Inquiry\n\u203a\u00a0 Account Maintenance\n\u203a\u00a0 Name / Address\nTRANSACTIONS\n\u203a\u00a0 Deposit / Withdrawal\n\u203a\u00a0 Transfer Funds\n\u203a\u00a0 History Inquiry\nOPERATIONS\n\u203a\u00a0 Teller Totals\n\u203a\u00a0 System Messages\nTERM WS-114\nSecure session\n\t\n\n--- Frame: legacy-app > workspace ---\nAccount Detail \u2014 A2100\t\u25a1 \u25a1 \u00d7\nMEMBER SERVICES > ACCOUNT DETAIL\nMember\t12345 \u2014 Avery Carter\tMember Status\tActive\nAccount Type\tRegular Savings\tSuffix\t01\nAccount Number\t****1100\tAccount Status\tActive\nBALANCE INFORMATION\nCurrent Balance\t$1,214.87\nAvailable Balance\t$971.59\nLast Activity\t2026-08-14\nBack to Member\nHost: CUCORE-PROD-02Tran: A2100\nF1=Help \u00a0 F3=Exit \u00a0 F12=Back",
+  "detected_messages": [],
+  "detected_dialogs": [],
+  "structured_tables": [
+    {
+      "caption": "",
+      "headers": [],
+      "rows": [
+        [
+          "N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12",
+          "Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off"
+        ]
+      ],
+      "frame_path": [
+        "legacy-app"
+      ]
+    },
+    {
+      "caption": "MEMBER SERVICES > ACCOUNT DETAIL",
+      "headers": [
+        "Member",
+        "Member Status",
+        "Account Type",
+        "Suffix",
+        "Account Number",
+        "Account Status"
+      ],
+      "rows": [
+        [
+          "12345 \u2014 Avery Carter",
+          "Active"
+        ],
+        [
+          "Regular Savings",
+          "01"
+        ],
+        [
+          "****1100",
+          "Active"
+        ]
+      ],
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ]
+    },
+    {
+      "caption": "BALANCE INFORMATION",
+      "headers": [
+        "Current Balance",
+        "Available Balance",
+        "Last Activity"
+      ],
+      "rows": [
+        [
+          "$1,214.87"
+        ],
+        [
+          "$971.59"
+        ],
+        [
+          "2026-08-14"
+        ]
+      ],
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ]
+    }
+  ],
+  "active_element": null,
+  "screenshot_ref": "screenshots/obs_012.png"
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Account Detail — A2100</title>
+  <link rel="stylesheet" href="/static/legacy.css">
+</head>
+<body class="workspace-body">
+  <table class="window-title" cellspacing="0" cellpadding="0" width="100%">
+    <tr><td>Account Detail — A2100</td><td class="window-buttons">□ □ ×</td></tr>
+  </table>
+  <div class="section-bar dark">MEMBER SERVICES &gt; ACCOUNT DETAIL</div>
+
+  <table class="account-summary" width="100%" cellspacing="0" cellpadding="6">
+    <tr><th>Member</th><td>{{ member.member_id }} — {{ member.name }}</td><th>Member Status</th><td>{{ member.status }}</td></tr>
+    <tr><th>Account Type</th><td>{{ account.description }}</td><th>Suffix</th><td>{{ account.suffix }}</td></tr>
+    <tr><th>Account Number</th><td>{{ account.masked_account }}</td><th>Account Status</th><td>{{ account.status }}</td></tr>
+  </table>
+
+  <div class="section-bar">BALANCE INFORMATION</div>
+  <table class="balance-table" width="100%" cellspacing="0" cellpadding="8">
+    <tr><th>Current Balance</th><td class="balance-value">{{ account.current_balance|currency }}</td></tr>
+    <tr><th>Available Balance</th><td>{{ account.available_balance|currency }}</td></tr>
+    <tr><th>Last Activity</th><td>{{ account.last_activity }}</td></tr>
+  </table>
+
+  <div class="detail-actions">
+    <button type="button" onclick="history.back()">Back to Member</button>
+  </div>
+  <div class="workspace-footer"><span>Host: CUCORE-PROD-02</span><span>Tran: A2100</span><span class="keys">F1=Help &nbsp; F3=Exit &nbsp; F12=Back</span></div>
+</body>
+</html>

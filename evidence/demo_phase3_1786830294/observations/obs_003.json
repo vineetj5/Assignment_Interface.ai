@@ -1,0 +1,337 @@
+{
+  "observation_id": "obs_003",
+  "timestamp": "2026-08-15T21:44:55.574097+00:00",
+  "page_url": "http://127.0.0.1:8000/",
+  "page_title": "Bank mock app Automation Demo",
+  "frame_hierarchy": [
+    {
+      "frame_id": "root",
+      "name": "",
+      "url": "http://127.0.0.1:8000/",
+      "parent_frame_id": null,
+      "depth": 0
+    },
+    {
+      "frame_id": "legacy-app",
+      "name": "legacy-app",
+      "url": "http://127.0.0.1:8000/legacy",
+      "parent_frame_id": "root",
+      "depth": 1
+    },
+    {
+      "frame_id": "workspace",
+      "name": "workspace",
+      "url": "http://127.0.0.1:8000/legacy/member-inquiry",
+      "parent_frame_id": "legacy-app",
+      "depth": 2
+    }
+  ],
+  "interactive_elements": [
+    {
+      "observation_id": "e_01",
+      "tag": "button",
+      "role": "button",
+      "name": "Look up member 12345 and read their current savings balance",
+      "label": "Look up member 12345 and read their current savings balance",
+      "text": "Look up member 12345 and read their current savings balance",
+      "value": "",
+      "attributes": {
+        "class": "sample-request",
+        "type": "button"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 916.0,
+        "y": 562.21875,
+        "width": 342.0,
+        "height": 29.0
+      }
+    },
+    {
+      "observation_id": "e_02",
+      "tag": "button",
+      "role": "button",
+      "name": "What is member 76821's checking balance?",
+      "label": "What is member 76821's checking balance?",
+      "text": "What is member 76821's checking balance?",
+      "value": "",
+      "attributes": {
+        "class": "sample-request",
+        "type": "button"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 916.0,
+        "y": 596.21875,
+        "width": 342.0,
+        "height": 29.0
+      }
+    },
+    {
+      "observation_id": "e_03",
+      "tag": "textarea",
+      "role": "textbox",
+      "name": "Type a member balance request...",
+      "label": "Type a member balance request...",
+      "text": "",
+      "value": "",
+      "attributes": {
+        "id": "goal-input",
+        "placeholder": "Type a member balance request...",
+        "style": ""
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": true,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 916.0,
+        "y": 662.21875,
+        "width": 279.0,
+        "height": 62.0
+      }
+    },
+    {
+      "observation_id": "e_04",
+      "tag": "button",
+      "role": "button",
+      "name": "run-goal",
+      "label": "run-goal",
+      "text": "Run",
+      "value": "",
+      "attributes": {
+        "id": "run-goal",
+        "class": "run-button",
+        "type": "button"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [],
+      "bounding_box": {
+        "x": 1202.0,
+        "y": 662.21875,
+        "width": 56.0,
+        "height": 62.0
+      }
+    },
+    {
+      "observation_id": "e_05",
+      "tag": "button",
+      "role": "button",
+      "name": "Sign Off (N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12 \u00b7 Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off)",
+      "label": "Sign Off (N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12 \u00b7 Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off)",
+      "text": "Sign Off",
+      "value": "",
+      "attributes": {
+        "type": "button",
+        "row_context": "N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12 \u00b7 Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [
+        "legacy-app"
+      ],
+      "bounding_box": {
+        "x": 798.15625,
+        "y": 13.5,
+        "width": 77.84375,
+        "height": 33.0
+      }
+    },
+    {
+      "observation_id": "e_06",
+      "tag": "input",
+      "role": "textbox",
+      "name": "Member Number",
+      "label": "Member Number",
+      "text": "",
+      "value": "99999",
+      "attributes": {
+        "name": "member_number",
+        "value": "",
+        "autocomplete": "off",
+        "style": ""
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": true,
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ],
+      "bounding_box": {
+        "x": 129.0,
+        "y": 98.5,
+        "width": 108.0,
+        "height": 23.0
+      }
+    },
+    {
+      "observation_id": "e_07",
+      "tag": "input",
+      "role": "button",
+      "name": "Find Member",
+      "label": "Find Member",
+      "text": "",
+      "value": "Find Member",
+      "attributes": {
+        "class": "legacy-button",
+        "type": "submit",
+        "value": "Find Member",
+        "style": ""
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ],
+      "bounding_box": {
+        "x": 245.0,
+        "y": 96.5,
+        "width": 122.953125,
+        "height": 27.0
+      }
+    },
+    {
+      "observation_id": "e_08",
+      "tag": "select",
+      "role": "combobox",
+      "name": "Test condition",
+      "label": "Test condition",
+      "text": "Normal processing\nMember not found\nPermission denied\nSlow response\nSession expired\nUnexpected verification dialog\nApplication error",
+      "value": "normal",
+      "attributes": {
+        "name": "test_condition"
+      },
+      "disabled": false,
+      "visible": true,
+      "editable": false,
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ],
+      "bounding_box": {
+        "x": 129.0,
+        "y": 151.0,
+        "width": 200.0,
+        "height": 24.0
+      }
+    }
+  ],
+  "visible_text": "--- Frame: root ---\nAUTOMATION ASSISTANT\nAssistant\nSupported target workflow: member lookup \u2192 account detail \u2192 current savings/checking balance.\nDemo members: 12345, 76821, 44002\nASSISTANT\nThe legacy application is ready. In the next phase this panel will route natural-language goals into discovery or deterministic replay.\nTRY A REQUEST\nLook up member 12345 and read their current savings balance\nWhat is member 76821's checking balance?\nNATURAL-LANGUAGE GOAL\nRun\nFUTURE EXECUTION PATH\nChat \u2192 capability router \u2192 discovery/replay \u2192 typed result\nTarget surface: nested iframes \u00b7 table layouts \u00b7 no test IDs\n\n--- Frame: legacy-app ---\nN Bank mock app\nCUCORE Online \u00b7 Release 8.4.12\n\tOperator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off\n\n\nCUCORE MAIN MENU\nMEMBER\n\u203a\u00a0 Member Inquiry\n\u203a\u00a0 Account Maintenance\n\u203a\u00a0 Name / Address\nTRANSACTIONS\n\u203a\u00a0 Deposit / Withdrawal\n\u203a\u00a0 Transfer Funds\n\u203a\u00a0 History Inquiry\nOPERATIONS\n\u203a\u00a0 Teller Totals\n\u203a\u00a0 System Messages\nTERM WS-114\nSecure session\n\t\n\n--- Frame: legacy-app > workspace ---\nMember Inquiry \u2014 M1100\t\u25a1 \u25a1 \u00d7\nMEMBER SERVICES > MEMBER INQUIRY\nMember Number:\t\t\tEnter a member number, then select Find Member.\nTest condition:\t\nNormal processing\nMember not found\nPermission denied\nSlow response\nSession expired\nUnexpected verification dialog\nApplication error\nReady.\nMEMBER PROFILE\nMember Name\t\tStatus\t\nMember Number\t\tMember Since\t\nPhone\t\tRelationship\t\nEmail\t\tMailing Area\t\nSHARE / DRAFT ACCOUNTS\nType\tSuffix\tDescription\tStatus\tLast Activity\tAction\nNo member selected.\nHost: CUCORE-PROD-02Tran: M1100\nF1=Help \u00a0 F3=Exit \u00a0 F9=Search",
+  "detected_messages": [
+    {
+      "title": "",
+      "message": "Ready.",
+      "code": "",
+      "level": "info",
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ]
+    }
+  ],
+  "detected_dialogs": [],
+  "structured_tables": [
+    {
+      "caption": "",
+      "headers": [],
+      "rows": [
+        [
+          "N Bank mock app\nCUCORE Online \u00b7 Release 8.4.12",
+          "Operator: VJUJJAV Role: MEMBER SERVICE Branch: 001 Sign Off"
+        ]
+      ],
+      "frame_path": [
+        "legacy-app"
+      ]
+    },
+    {
+      "caption": "",
+      "headers": [],
+      "rows": [
+        [
+          "Member Number:",
+          "",
+          "",
+          "Enter a member number, then select Find Member."
+        ],
+        [
+          "Test condition:",
+          "Normal processing\nMember not found\nPermission denied\nSlow response\nSession expired\nUnexpected verification dialog\nApplication error"
+        ]
+      ],
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ]
+    },
+    {
+      "caption": "MEMBER PROFILE",
+      "headers": [
+        "Member Name",
+        "Status",
+        "Member Number",
+        "Member Since",
+        "Phone",
+        "Relationship",
+        "Email",
+        "Mailing Area"
+      ],
+      "rows": [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ],
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ]
+    },
+    {
+      "caption": "SHARE / DRAFT ACCOUNTS",
+      "headers": [
+        "Type",
+        "Suffix",
+        "Description",
+        "Status",
+        "Last Activity",
+        "Action"
+      ],
+      "rows": [
+        [
+          "No member selected."
+        ]
+      ],
+      "frame_path": [
+        "legacy-app",
+        "workspace"
+      ]
+    }
+  ],
+  "active_element": null,
+  "screenshot_ref": "screenshots/obs_003.png"
+}

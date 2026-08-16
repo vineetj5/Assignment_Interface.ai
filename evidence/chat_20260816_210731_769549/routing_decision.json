@@ -1,0 +1,11 @@
+{
+  "status": "invoke",
+  "capability": "lookup_balance",
+  "arguments": {
+    "member_id": "[REDACTED]",
+    "account_type": "checking"
+  },
+  "missing_arguments": [],
+  "clarification_question": null,
+  "reason_code": null
+}

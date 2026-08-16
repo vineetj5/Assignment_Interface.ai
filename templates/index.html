@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bank mock app Automation Demo</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="host-body">
+  <div class="host-shell">
+    <div class="target-column">
+      <iframe class="legacy-outer-frame" name="legacy-app" src="/legacy" title="Bank mock app legacy servicing application"></iframe>
+    </div>
+
+    <aside class="assistant-panel">
+      <div class="assistant-head">
+        <div>
+          <div class="eyebrow">AUTOMATION ASSISTANT</div>
+          <h1>Assistant</h1>
+        </div>
+      </div>
+
+      <div class="assistant-subhead">
+        <div>Supported target workflow: member lookup → account detail → current savings/checking balance.</div>
+        <div class="demo-members">Demo members: {{ demo_members|join(', ') }}</div>
+        <div class="live-status">Live workflow: <span id="live-status">Ready</span></div>
+      </div>
+
+      <div class="conversation" id="conversation">
+        <div class="speaker">ASSISTANT</div>
+        <div class="bubble assistant-bubble">
+          The legacy application is ready. Ask for an approved member balance lookup.
+        </div>
+      </div>
+
+      <div class="assistant-bottom">
+        <div class="try-label">TRY A REQUEST</div>
+        <button class="sample-request" type="button">Look up member 12345 and read their current savings balance</button>
+        <button class="sample-request" type="button">What is member 76821's checking balance?</button>
+
+        <div class="goal-box">
+          <div class="try-label">NATURAL-LANGUAGE GOAL</div>
+          <div class="goal-row">
+            <textarea id="goal-input" placeholder="Type a member balance request..."></textarea>
+            <button id="run-goal" class="run-button" type="button">Run</button>
+          </div>
+        </div>
+
+        <div class="future-path">
+          <strong>EXECUTION PATH</strong>
+          <div>Chat → capability router → deterministic replay → typed result</div>
+          <div>Routing may use an LLM · UI actions use approved artifacts only</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <script src="/static/chat.js"></script>
+</body>
+</html>

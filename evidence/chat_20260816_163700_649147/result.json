@@ -1,0 +1,10 @@
+{
+  "status": "ready",
+  "message": "Running lookup_balance.",
+  "capability": "lookup_balance",
+  "missing_arguments": [],
+  "data": {
+    "member_id": "12345",
+    "account_type": "checking"
+  }
+}

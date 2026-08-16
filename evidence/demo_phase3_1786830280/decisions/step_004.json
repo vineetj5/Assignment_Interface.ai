@@ -1,0 +1,48 @@
+{
+  "step": 4,
+  "observation_ref": "obs_007",
+  "model_decision": {
+    "action": "extract",
+    "target_id": "e_06",
+    "value": null,
+    "reasoning_summary": "On Account Detail page, reading Current Balance.",
+    "expected_result": "Current balance amount extracted.",
+    "extracted_output": null,
+    "escalation_reason": null
+  },
+  "resolved_target": {
+    "observation_id": "e_06",
+    "role": "",
+    "name": "Current Balance",
+    "text": "$5,521.10",
+    "tag": "td",
+    "attributes": {
+      "class": "balance-value"
+    },
+    "frame_path": [
+      "legacy-app",
+      "workspace"
+    ],
+    "css": null
+  },
+  "action_result": {
+    "action_id": "act_004",
+    "action_type": "extract",
+    "status": "success",
+    "started_at": "2026-08-15T21:44:41.509814+00:00",
+    "completed_at": "2026-08-15T21:44:41.520533+00:00",
+    "duration_ms": 10.71,
+    "output": {
+      "text": "$5,521.10",
+      "value": null
+    },
+    "error": null,
+    "before_observation_ref": "obs_007",
+    "after_observation_ref": "obs_008",
+    "screenshot_ref": "screenshots/obs_008.png"
+  },
+  "extracted_output": {
+    "current_balance": "$5,521.10"
+  },
+  "timestamp": "2026-08-15T21:44:41.558417+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "step": 3,
+  "observation_ref": "obs_005",
+  "model_decision": {
+    "action": "finish",
+    "target_id": null,
+    "value": null,
+    "reasoning_summary": "Target member was not found in the servicing system.",
+    "expected_result": null,
+    "extracted_output": {
+      "status": "member_not_found",
+      "member_id": "99999"
+    },
+    "escalation_reason": null
+  },
+  "resolved_target": null,
+  "action_result": {
+    "status": "success",
+    "terminal": "finish"
+  },
+  "extracted_output": {
+    "status": "member_not_found",
+    "member_id": "99999"
+  },
+  "timestamp": "2026-08-15T21:44:55.792843+00:00"
+}

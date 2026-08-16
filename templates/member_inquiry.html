@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Member Inquiry — M1100</title>
+  <link rel="stylesheet" href="/static/legacy.css">
+</head>
+<body class="workspace-body">
+  <table class="window-title" cellspacing="0" cellpadding="0" width="100%">
+    <tr>
+      <td>Member Inquiry — M1100</td>
+      <td class="window-buttons">□ □ ×</td>
+    </tr>
+  </table>
+  <div class="section-bar dark">MEMBER SERVICES &gt; MEMBER INQUIRY</div>
+
+  <form method="post" action="/legacy/member-search">
+    <table class="search-table" cellspacing="0" cellpadding="4" width="100%">
+      <tr>
+        <td class="label-cell">Member Number:</td>
+        <td><input name="member_number" value="{{ searched_member_id }}" autocomplete="off"></td>
+        <td><input class="legacy-button" type="submit" value="Find Member"></td>
+        <td class="hint-cell">Enter a member number, then select Find Member.</td>
+      </tr>
+      <tr>
+        <td class="label-cell">Test condition:</td>
+        <td colspan="3">
+          <select name="test_condition">
+            <option value="normal" {% if condition=='normal' %}selected{% endif %}>Normal processing</option>
+            <option value="member_not_found" {% if condition=='member_not_found' %}selected{% endif %}>Member not found</option>
+            <option value="permission_denied" {% if condition=='permission_denied' %}selected{% endif %}>Permission denied</option>
+            <option value="slow_response" {% if condition=='slow_response' %}selected{% endif %}>Slow response</option>
+            <option value="session_expired" {% if condition=='session_expired' %}selected{% endif %}>Session expired</option>
+            <option value="unexpected_dialog" {% if condition=='unexpected_dialog' %}selected{% endif %}>Unexpected verification dialog</option>
+            <option value="app_error" {% if condition=='app_error' %}selected{% endif %}>Application error</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <div class="status-line">{% if member %}Member loaded.{% elif business_outcome or hard_failure %}Processing stopped.{% else %}Ready.{% endif %}</div>
+
+  {% if business_outcome %}
+  <table class="message-box business" width="100%" cellspacing="0" cellpadding="0">
+    <tr><td class="message-title">{{ business_outcome.title }}</td></tr>
+    <tr><td>{{ business_outcome.message }}</td></tr>
+    <tr><td class="message-code">Outcome code: {{ business_outcome.code }}</td></tr>
+  </table>
+  {% endif %}
+
+  {% if hard_failure %}
+  <table class="message-box failure" width="100%" cellspacing="0" cellpadding="0">
+    <tr><td class="message-title">{{ hard_failure.title }}</td></tr>
+    <tr><td>{{ hard_failure.message }}</td></tr>
+    <tr><td class="message-code">Failure code: {{ hard_failure.code }}</td></tr>
+  </table>
+  {% endif %}
+
+  <div class="section-bar">MEMBER PROFILE</div>
+  <table class="profile-table" cellspacing="0" cellpadding="5" width="100%">
+    <tr>
+      <th>Member Name</th><td>{{ member.name if member else '' }}</td>
+      <th>Status</th><td>{{ member.status if member else '' }}</td>
+    </tr>
+    <tr>
+      <th>Member Number</th><td>{{ member.member_id if member else '' }}</td>
+      <th>Member Since</th><td>{{ member.member_since if member else '' }}</td>
+    </tr>
+    <tr>
+      <th>Phone</th><td>{{ member.phone if member else '' }}</td>
+      <th>Relationship</th><td>{{ member.relationship_tier if member else '' }}</td>
+    </tr>
+    <tr>
+      <th>Email</th><td>{{ member.email if member else '' }}</td>
+      <th>Mailing Area</th><td>{% if member %}{{ member.mailing_city }}, {{ member.mailing_state }}{% endif %}</td>
+    </tr>
+  </table>
+
+  <div class="section-bar">SHARE / DRAFT ACCOUNTS</div>
+  <table class="accounts-table" cellspacing="0" cellpadding="5" width="100%">
+    <tr>
+      <th>Type</th><th>Suffix</th><th>Description</th><th>Status</th><th>Last Activity</th><th>Action</th>
+    </tr>
+    {% if member %}
+      {% for account_type, account in member.accounts.items() %}
+      <tr class="account-row {% if show_dialog %}locked-account{% endif %}">
+        <td>{{ account.type_code }}</td>
+        <td>{{ account.suffix }}</td>
+        <td>{{ account.description }}</td>
+        <td>{{ account.status }}</td>
+        <td>{{ account.last_activity }}</td>
+        <td>
+          <a class="view-link {% if show_dialog %}disabled-link{% endif %}" href="/legacy/account/{{ member.member_id }}/{{ account_type }}?cond={{ condition }}">View</a>
+        </td>
+      </tr>
+      {% endfor %}
+    {% else %}
+      <tr><td colspan="6" class="empty-row">No member selected.</td></tr>
+    {% endif %}
+  </table>
+
+  {% if show_dialog %}
+  <div class="dialog-shade" id="verificationShade">
+    <table class="legacy-dialog" cellspacing="0" cellpadding="0">
+      <tr><td class="dialog-title">Additional Verification Required</td></tr>
+      <tr><td class="dialog-body">This member requires operator verification before account details can be opened.</td></tr>
+      <tr><td class="dialog-actions"><button type="button" onclick="continueVerification()">Continue</button><button type="button" onclick="cancelVerification()">Cancel</button></td></tr>
+    </table>
+  </div>
+  <script>
+    function continueVerification(){
+      document.getElementById('verificationShade').style.display='none';
+      var links=document.querySelectorAll('.disabled-link');
+      for(var i=0;i<links.length;i++){ links[i].className='view-link'; }
+      var rows=document.querySelectorAll('.locked-account');
+      for(var j=0;j<rows.length;j++){ rows[j].className='account-row'; }
+    }
+    function cancelVerification(){
+      window.location='/legacy/member-inquiry';
+    }
+  </script>
+  {% endif %}
+
+  <div class="workspace-footer"><span>Host: CUCORE-PROD-02</span><span>Tran: M1100</span><span class="keys">F1=Help &nbsp; F3=Exit &nbsp; F9=Search</span></div>
+</body>
+</html>

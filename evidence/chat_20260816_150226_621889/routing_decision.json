@@ -1,0 +1,12 @@
+{
+  "status": "clarify",
+  "capability": "lookup_balance",
+  "arguments": {
+    "account_type": "checking"
+  },
+  "missing_arguments": [
+    "member_id"
+  ],
+  "clarification_question": "Which member's checking balance would you like to look up?",
+  "reason_code": null
+}

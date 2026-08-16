@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Operator Handoff Console</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="host-body">
+  <div class="assistant-panel" style="max-width:900px;margin:30px auto;min-height:520px">
+    <div class="assistant-head">
+      <div>
+        <div class="eyebrow">PHASE 7</div>
+        <h1>Operator Handoff Console</h1>
+      </div>
+    </div>
+    <div class="assistant-subhead">
+      Human operators can claim, resume, or cancel escalated deterministic replay runs.
+    </div>
+    <div class="conversation" id="interventions"></div>
+    <div class="assistant-bottom">
+      <div class="goal-box">
+        <button class="run-button" type="button" onclick="loadInterventions()" style="height:36px;width:110px">Refresh</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    async function post(url){
+      const response = await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({operator_id:'operator_demo'})});
+      await loadInterventions();
+      return response.json();
+    }
+    async function loadInterventions(){
+      const root=document.getElementById('interventions');
+      const response=await fetch('/api/operator/interventions');
+      const data=await response.json();
+      root.innerHTML='';
+      if(!data.interventions.length){root.innerHTML='<div class="bubble assistant-bubble">No open interventions.</div>';return;}
+      data.interventions.forEach(function(item){
+        const div=document.createElement('div');
+        div.className='bubble assistant-bubble';
+        div.innerHTML='<strong>'+item.reason_code+'</strong><br>Run: '+item.run_id+'<br>Status: '+item.status+'<br>Browser session: '+item.browser_session_id+
+          '<br><button onclick="post(\\'/api/runs/'+item.run_id+'/claim\\')">Claim</button> '+
+          '<button onclick="post(\\'/api/runs/'+item.run_id+'/resume\\')">Resume</button> '+
+          '<button onclick="post(\\'/api/runs/'+item.run_id+'/cancel\\')">Cancel</button>';
+        root.appendChild(div);
+      });
+    }
+    loadInterventions();
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1",
+  "capabilities": [
+    {
+      "name": "lookup_balance",
+      "description": "Look up a member and return the current balance for a savings or checking account.",
+      "latest_version": "1.0.0",
+      "approved_version": "1.0.0",
+      "status": "approved",
+      "artifact_path": "lookup_balance/1.0.0.json",
+      "inputs": [
+        {
+          "name": "member_id",
+          "type": "string",
+          "required": true,
+          "description": "Credit union member identifier (numeric digits).",
+          "validation": {
+            "pattern": "^\\d+$",
+            "min_length": 4,
+            "max_length": 10
+          },
+          "sensitive": true
+        },
+        {
+          "name": "account_type",
+          "type": "enum",
+          "required": true,
+          "description": "Account type category to inspect.",
+          "values": [
+            "savings",
+            "checking"
+          ],
+          "sensitive": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "member_id",
+          "type": "string",
+          "description": "Verified member number."
+        },
+        {
+          "name": "account_type",
+          "type": "enum",
+          "description": "Account category.",
+          "values": [
+            "savings",
+            "checking"
+          ]
+        },
+        {
+          "name": "current_balance",
+          "type": "money",
+          "description": "Current account balance amount and currency.",
+          "schema_def": {
+            "amount": {
+              "type": "decimal"
+            },
+            "currency": {
+              "type": "string"
+            }
+          }
+        }
+      ],
+      "examples": [
+        "What is member 12345's savings balance?",
+        "Check the checking balance for member 76821.",
+        "Look up balance for member 13278."
+      ]
+    }
+  ]
+}

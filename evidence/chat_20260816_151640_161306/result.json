@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "message": "Member 76821's current checking balance is $1036.01.",
+  "capability": "lookup_balance",
+  "missing_arguments": [],
+  "replay_run_id": "replay_1786893400",
+  "data": {
+    "member_id": "76821",
+    "account_type": "checking",
+    "current_balance": {
+      "amount": "1036.01",
+      "currency": "USD"
+    }
+  }
+}

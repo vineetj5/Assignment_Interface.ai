@@ -1,0 +1,8 @@
+{
+  "run_id": "chat_20260816_162849_598245",
+  "timestamp": "2026-08-16T16:28:49.599476+00:00",
+  "available_capabilities": [
+    "lookup_balance"
+  ],
+  "session_id": "session_k6vh0lm3pwm_1786897701193"
+}

@@ -1,0 +1,1652 @@
+[
+  {
+    "member_id": "12345",
+    "name": "Avery Carter",
+    "status": "Active",
+    "member_since": "2008-01-01",
+    "email": "avery.carter1@example.test",
+    "phone": "(555) 200-1000",
+    "mailing_city": "Rockville",
+    "mailing_state": "MD",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1100",
+        "status": "Active",
+        "current_balance": 1214.87,
+        "available_balance": 971.59,
+        "last_activity": "2026-08-14"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4600",
+        "status": "Active",
+        "current_balance": 460.87,
+        "available_balance": 394.63,
+        "last_activity": "2026-08-13"
+      }
+    }
+  },
+  {
+    "member_id": "76821",
+    "name": "Jordan Johnson",
+    "status": "Active",
+    "member_since": "2008-06-22",
+    "email": "jordan.johnson2@example.test",
+    "phone": "(555) 201-1001",
+    "mailing_city": "Arlington",
+    "mailing_state": "VA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1117",
+        "status": "Active",
+        "current_balance": 2039.29,
+        "available_balance": 1884.66,
+        "last_activity": "2026-08-13"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4623",
+        "status": "Active",
+        "current_balance": 1036.01,
+        "available_balance": 885.21,
+        "last_activity": "2026-08-11"
+      }
+    }
+  },
+  {
+    "member_id": "44002",
+    "name": "Taylor Kim",
+    "status": "Active",
+    "member_since": "2008-12-12",
+    "email": "taylor.kim3@example.test",
+    "phone": "(555) 202-1002",
+    "mailing_city": "Washington",
+    "mailing_state": "DC",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1134",
+        "status": "Active",
+        "current_balance": 2965.22,
+        "available_balance": 2953.76,
+        "last_activity": "2026-08-12"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4646",
+        "status": "Active",
+        "current_balance": 1485.75,
+        "available_balance": 1445.87,
+        "last_activity": "2026-08-09"
+      }
+    }
+  },
+  {
+    "member_id": "93810",
+    "name": "Morgan Martinez",
+    "status": "Active",
+    "member_since": "2009-06-03",
+    "email": "morgan.martinez4@example.test",
+    "phone": "(555) 203-1003",
+    "mailing_city": "Pittsburgh",
+    "mailing_state": "PA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1151",
+        "status": "Active",
+        "current_balance": 3734.5,
+        "available_balance": 3676.3,
+        "last_activity": "2026-08-11"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4669",
+        "status": "Active",
+        "current_balance": 1785.51,
+        "available_balance": 1767.83,
+        "last_activity": "2026-08-07"
+      }
+    }
+  },
+  {
+    "member_id": "24592",
+    "name": "Casey Thomas",
+    "status": "Active",
+    "member_since": "2009-11-23",
+    "email": "casey.thomas5@example.test",
+    "phone": "(555) 204-1004",
+    "mailing_city": "Raleigh",
+    "mailing_state": "NC",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1168",
+        "status": "Active",
+        "current_balance": 4642.07,
+        "available_balance": 4550.86,
+        "last_activity": "2026-08-10"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4692",
+        "status": "Active",
+        "current_balance": 2439.47,
+        "available_balance": 2374.69,
+        "last_activity": "2026-08-05"
+      }
+    }
+  },
+  {
+    "member_id": "13278",
+    "name": "Riley Lee",
+    "status": "Active",
+    "member_since": "2010-05-15",
+    "email": "riley.lee6@example.test",
+    "phone": "(555) 205-1005",
+    "mailing_city": "Austin",
+    "mailing_state": "TX",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1185",
+        "status": "Active",
+        "current_balance": 5521.1,
+        "available_balance": 5286.94,
+        "last_activity": "2026-08-09"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4715",
+        "status": "Active",
+        "current_balance": 2816.04,
+        "available_balance": 2702.63,
+        "last_activity": "2026-08-03"
+      }
+    }
+  },
+  {
+    "member_id": "46048",
+    "name": "Cameron Young",
+    "status": "Active",
+    "member_since": "2010-11-04",
+    "email": "cameron.young7@example.test",
+    "phone": "(555) 206-1006",
+    "mailing_city": "San Jose",
+    "mailing_state": "CA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1202",
+        "status": "Active",
+        "current_balance": 6634.19,
+        "available_balance": 6451.91,
+        "last_activity": "2026-08-08"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4738",
+        "status": "Active",
+        "current_balance": 3274.48,
+        "available_balance": 3245.88,
+        "last_activity": "2026-08-01"
+      }
+    }
+  },
+  {
+    "member_id": "42098",
+    "name": "Drew King",
+    "status": "Active",
+    "member_since": "2011-04-26",
+    "email": "drew.king8@example.test",
+    "phone": "(555) 207-1007",
+    "mailing_city": "Chicago",
+    "mailing_state": "IL",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1219",
+        "status": "Active",
+        "current_balance": 7432.62,
+        "available_balance": 7272.62,
+        "last_activity": "2026-08-07"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4761",
+        "status": "Active",
+        "current_balance": 4007.19,
+        "available_balance": 3909.72,
+        "last_activity": "2026-07-30"
+      }
+    }
+  },
+  {
+    "member_id": "39256",
+    "name": "Parker Green",
+    "status": "Active",
+    "member_since": "2011-10-16",
+    "email": "parker.green9@example.test",
+    "phone": "(555) 208-1008",
+    "mailing_city": "Atlanta",
+    "mailing_state": "GA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1236",
+        "status": "Active",
+        "current_balance": 8498.47,
+        "available_balance": 8304.47,
+        "last_activity": "2026-08-06"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4784",
+        "status": "Active",
+        "current_balance": 4450.38,
+        "available_balance": 4410.3,
+        "last_activity": "2026-07-28"
+      }
+    }
+  },
+  {
+    "member_id": "28289",
+    "name": "Quinn Patel",
+    "status": "Active",
+    "member_since": "2012-04-06",
+    "email": "quinn.patel10@example.test",
+    "phone": "(555) 209-1009",
+    "mailing_city": "Boston",
+    "mailing_state": "MA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1253",
+        "status": "Active",
+        "current_balance": 9085.48,
+        "available_balance": 9018.54,
+        "last_activity": "2026-08-05"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4807",
+        "status": "Active",
+        "current_balance": 4779.35,
+        "available_balance": 4742.43,
+        "last_activity": "2026-07-26"
+      }
+    }
+  },
+  {
+    "member_id": "23434",
+    "name": "Reese Garcia",
+    "status": "Active",
+    "member_since": "2012-09-26",
+    "email": "reese.garcia11@example.test",
+    "phone": "(555) 210-1010",
+    "mailing_city": "Rockville",
+    "mailing_state": "MD",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1270",
+        "status": "Active",
+        "current_balance": 10454.15,
+        "available_balance": 10375.48,
+        "last_activity": "2026-08-04"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4830",
+        "status": "Active",
+        "current_balance": 5434.81,
+        "available_balance": 5320.11,
+        "last_activity": "2026-08-13"
+      }
+    }
+  },
+  {
+    "member_id": "98696",
+    "name": "Skyler Davis",
+    "status": "Active",
+    "member_since": "2013-03-18",
+    "email": "skyler.davis12@example.test",
+    "phone": "(555) 211-1011",
+    "mailing_city": "Arlington",
+    "mailing_state": "VA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1287",
+        "status": "Active",
+        "current_balance": 11093.79,
+        "available_balance": 10979.08,
+        "last_activity": "2026-08-03"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4853",
+        "status": "Active",
+        "current_balance": 5933.45,
+        "available_balance": 5887.1,
+        "last_activity": "2026-08-11"
+      }
+    }
+  },
+  {
+    "member_id": "81482",
+    "name": "Hayden Anderson",
+    "status": "Active",
+    "member_since": "2013-09-07",
+    "email": "hayden.anderson13@example.test",
+    "phone": "(555) 212-1012",
+    "mailing_city": "Washington",
+    "mailing_state": "DC",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1304",
+        "status": "Active",
+        "current_balance": 11932.55,
+        "available_balance": 11866.86,
+        "last_activity": "2026-08-02"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4876",
+        "status": "Active",
+        "current_balance": 6314.69,
+        "available_balance": 6212.39,
+        "last_activity": "2026-08-09"
+      }
+    }
+  },
+  {
+    "member_id": "21395",
+    "name": "Emerson Jackson",
+    "status": "Active",
+    "member_since": "2014-02-27",
+    "email": "emerson.jackson14@example.test",
+    "phone": "(555) 213-1013",
+    "mailing_city": "Pittsburgh",
+    "mailing_state": "PA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1321",
+        "status": "Active",
+        "current_balance": 13171.42,
+        "available_balance": 13116.59,
+        "last_activity": "2026-08-01"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4899",
+        "status": "Active",
+        "current_balance": 6753.29,
+        "available_balance": 6578.72,
+        "last_activity": "2026-08-07"
+      }
+    }
+  },
+  {
+    "member_id": "87397",
+    "name": "Rowan Lewis",
+    "status": "Active",
+    "member_since": "2014-08-19",
+    "email": "rowan.lewis15@example.test",
+    "phone": "(555) 214-1014",
+    "mailing_city": "Raleigh",
+    "mailing_state": "NC",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1338",
+        "status": "Active",
+        "current_balance": 13890.54,
+        "available_balance": 13878.76,
+        "last_activity": "2026-07-31"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4922",
+        "status": "Active",
+        "current_balance": 7147.93,
+        "available_balance": 7128.74,
+        "last_activity": "2026-08-05"
+      }
+    }
+  },
+  {
+    "member_id": "65302",
+    "name": "Finley Hall",
+    "status": "Active",
+    "member_since": "2015-02-08",
+    "email": "finley.hall16@example.test",
+    "phone": "(555) 215-1015",
+    "mailing_city": "Austin",
+    "mailing_state": "TX",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1355",
+        "status": "Active",
+        "current_balance": 14862.77,
+        "available_balance": 14757.23,
+        "last_activity": "2026-07-30"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4945",
+        "status": "Active",
+        "current_balance": 7845.47,
+        "available_balance": 7834.35,
+        "last_activity": "2026-08-03"
+      }
+    }
+  },
+  {
+    "member_id": "14165",
+    "name": "Dakota Scott",
+    "status": "Active",
+    "member_since": "2015-07-31",
+    "email": "dakota.scott17@example.test",
+    "phone": "(555) 216-1016",
+    "mailing_city": "San Jose",
+    "mailing_state": "CA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1372",
+        "status": "Active",
+        "current_balance": 15653.13,
+        "available_balance": 15520.85,
+        "last_activity": "2026-07-29"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4968",
+        "status": "Active",
+        "current_balance": 8393.88,
+        "available_balance": 8223.94,
+        "last_activity": "2026-08-01"
+      }
+    }
+  },
+  {
+    "member_id": "13905",
+    "name": "Blake Nguyen",
+    "status": "Restricted",
+    "member_since": "2016-01-20",
+    "email": "blake.nguyen18@example.test",
+    "phone": "(555) 217-1017",
+    "mailing_city": "Chicago",
+    "mailing_state": "IL",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1389",
+        "status": "Active",
+        "current_balance": 16805.98,
+        "available_balance": 16625.8,
+        "last_activity": "2026-07-28"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****4991",
+        "status": "Active",
+        "current_balance": 8585.67,
+        "available_balance": 8466.37,
+        "last_activity": "2026-07-30"
+      }
+    }
+  },
+  {
+    "member_id": "22280",
+    "name": "Logan Williams",
+    "status": "Active",
+    "member_since": "2016-07-11",
+    "email": "logan.williams19@example.test",
+    "phone": "(555) 218-1018",
+    "mailing_city": "Atlanta",
+    "mailing_state": "GA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1406",
+        "status": "Active",
+        "current_balance": 17557.35,
+        "available_balance": 17397.11,
+        "last_activity": "2026-08-14"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5014",
+        "status": "Active",
+        "current_balance": 9149.47,
+        "available_balance": 9129.95,
+        "last_activity": "2026-07-28"
+      }
+    }
+  },
+  {
+    "member_id": "38657",
+    "name": "Harper Brown",
+    "status": "Active",
+    "member_since": "2016-12-31",
+    "email": "harper.brown20@example.test",
+    "phone": "(555) 219-1019",
+    "mailing_city": "Boston",
+    "mailing_state": "MA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1423",
+        "status": "Active",
+        "current_balance": 18419.51,
+        "available_balance": 18181.06,
+        "last_activity": "2026-08-13"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5037",
+        "status": "Active",
+        "current_balance": 9692.73,
+        "available_balance": 9539.46,
+        "last_activity": "2026-07-26"
+      }
+    }
+  },
+  {
+    "member_id": "40495",
+    "name": "Mason Wilson",
+    "status": "Active",
+    "member_since": "2017-06-22",
+    "email": "mason.wilson21@example.test",
+    "phone": "(555) 220-1020",
+    "mailing_city": "Rockville",
+    "mailing_state": "MD",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1440",
+        "status": "Active",
+        "current_balance": 19247.09,
+        "available_balance": 19202.43,
+        "last_activity": "2026-08-12"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5060",
+        "status": "Active",
+        "current_balance": 10193.98,
+        "available_balance": 10034.27,
+        "last_activity": "2026-08-13"
+      }
+    }
+  },
+  {
+    "member_id": "76237",
+    "name": "Nora Moore",
+    "status": "Active",
+    "member_since": "2017-12-12",
+    "email": "nora.moore22@example.test",
+    "phone": "(555) 221-1021",
+    "mailing_city": "Arlington",
+    "mailing_state": "VA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1457",
+        "status": "Active",
+        "current_balance": 20463.93,
+        "available_balance": 20304.19,
+        "last_activity": "2026-08-11"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5083",
+        "status": "Active",
+        "current_balance": 10620.52,
+        "available_balance": 10513.95,
+        "last_activity": "2026-08-11"
+      }
+    }
+  },
+  {
+    "member_id": "88907",
+    "name": "Ethan Clark",
+    "status": "Active",
+    "member_since": "2018-06-03",
+    "email": "ethan.clark23@example.test",
+    "phone": "(555) 222-1022",
+    "mailing_city": "Washington",
+    "mailing_state": "DC",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1474",
+        "status": "Active",
+        "current_balance": 21018.36,
+        "available_balance": 20883.52,
+        "last_activity": "2026-08-10"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5106",
+        "status": "Active",
+        "current_balance": 11246.93,
+        "available_balance": 11110.67,
+        "last_activity": "2026-08-09"
+      }
+    }
+  },
+  {
+    "member_id": "13478",
+    "name": "Maya Allen",
+    "status": "Active",
+    "member_since": "2018-11-23",
+    "email": "maya.allen24@example.test",
+    "phone": "(555) 223-1023",
+    "mailing_city": "Pittsburgh",
+    "mailing_state": "PA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1491",
+        "status": "Active",
+        "current_balance": 22120.39,
+        "available_balance": 22039.35,
+        "last_activity": "2026-08-09"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5129",
+        "status": "Active",
+        "current_balance": 11505.54,
+        "available_balance": 11502.13,
+        "last_activity": "2026-08-07"
+      }
+    }
+  },
+  {
+    "member_id": "83563",
+    "name": "Liam Wright",
+    "status": "Active",
+    "member_since": "2019-05-15",
+    "email": "liam.wright25@example.test",
+    "phone": "(555) 224-1024",
+    "mailing_city": "Raleigh",
+    "mailing_state": "NC",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1508",
+        "status": "Active",
+        "current_balance": 23233.03,
+        "available_balance": 23025.11,
+        "last_activity": "2026-08-08"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5152",
+        "status": "Active",
+        "current_balance": 12256.18,
+        "available_balance": 12202.37,
+        "last_activity": "2026-08-05"
+      }
+    }
+  },
+  {
+    "member_id": "36062",
+    "name": "Avery Carter",
+    "status": "Active",
+    "member_since": "2019-11-04",
+    "email": "avery.carter26@example.test",
+    "phone": "(555) 225-1025",
+    "mailing_city": "Austin",
+    "mailing_state": "TX",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1525",
+        "status": "Active",
+        "current_balance": 23710.71,
+        "available_balance": 23473.97,
+        "last_activity": "2026-08-07"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5175",
+        "status": "Active",
+        "current_balance": 12743.15,
+        "available_balance": 12728.16,
+        "last_activity": "2026-08-03"
+      }
+    }
+  },
+  {
+    "member_id": "95181",
+    "name": "Jordan Johnson",
+    "status": "Active",
+    "member_since": "2020-04-25",
+    "email": "jordan.johnson27@example.test",
+    "phone": "(555) 226-1026",
+    "mailing_city": "San Jose",
+    "mailing_state": "CA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1542",
+        "status": "Active",
+        "current_balance": 24838.02,
+        "available_balance": 24647.87,
+        "last_activity": "2026-08-06"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5198",
+        "status": "Active",
+        "current_balance": 12987.7,
+        "available_balance": 12853.68,
+        "last_activity": "2026-08-01"
+      }
+    }
+  },
+  {
+    "member_id": "81426",
+    "name": "Taylor Kim",
+    "status": "Active",
+    "member_since": "2020-10-15",
+    "email": "taylor.kim28@example.test",
+    "phone": "(555) 227-1027",
+    "mailing_city": "Chicago",
+    "mailing_state": "IL",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1559",
+        "status": "Active",
+        "current_balance": 1072.49,
+        "available_balance": 935.04,
+        "last_activity": "2026-08-05"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5221",
+        "status": "Active",
+        "current_balance": 796.71,
+        "available_balance": 750.33,
+        "last_activity": "2026-07-30"
+      }
+    }
+  },
+  {
+    "member_id": "64987",
+    "name": "Morgan Martinez",
+    "status": "Active",
+    "member_since": "2021-04-06",
+    "email": "morgan.martinez29@example.test",
+    "phone": "(555) 228-1028",
+    "mailing_city": "Atlanta",
+    "mailing_state": "GA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1576",
+        "status": "Active",
+        "current_balance": 2357.78,
+        "available_balance": 2304.83,
+        "last_activity": "2026-08-04"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5244",
+        "status": "Active",
+        "current_balance": 1268.26,
+        "available_balance": 1173.88,
+        "last_activity": "2026-07-28"
+      }
+    }
+  },
+  {
+    "member_id": "38893",
+    "name": "Casey Thomas",
+    "status": "Active",
+    "member_since": "2021-09-26",
+    "email": "casey.thomas30@example.test",
+    "phone": "(555) 229-1029",
+    "mailing_city": "Boston",
+    "mailing_state": "MA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1593",
+        "status": "Active",
+        "current_balance": 3199.8,
+        "available_balance": 3121.87,
+        "last_activity": "2026-08-03"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5267",
+        "status": "Dormant",
+        "current_balance": 1688.86,
+        "available_balance": 1514.71,
+        "last_activity": "2026-07-26"
+      }
+    }
+  },
+  {
+    "member_id": "68878",
+    "name": "Riley Lee",
+    "status": "Active",
+    "member_since": "2022-03-18",
+    "email": "riley.lee31@example.test",
+    "phone": "(555) 230-1030",
+    "mailing_city": "Rockville",
+    "mailing_state": "MD",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1610",
+        "status": "Active",
+        "current_balance": 4073.04,
+        "available_balance": 3943.65,
+        "last_activity": "2026-08-02"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5290",
+        "status": "Active",
+        "current_balance": 2247.13,
+        "available_balance": 2225.95,
+        "last_activity": "2026-08-13"
+      }
+    }
+  },
+  {
+    "member_id": "87236",
+    "name": "Cameron Young",
+    "status": "Active",
+    "member_since": "2022-09-07",
+    "email": "cameron.young32@example.test",
+    "phone": "(555) 231-1031",
+    "mailing_city": "Arlington",
+    "mailing_state": "VA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1627",
+        "status": "Active",
+        "current_balance": 4773.72,
+        "available_balance": 4626.64,
+        "last_activity": "2026-08-01"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5313",
+        "status": "Active",
+        "current_balance": 2704.32,
+        "available_balance": 2664.05,
+        "last_activity": "2026-08-11"
+      }
+    }
+  },
+  {
+    "member_id": "46463",
+    "name": "Drew King",
+    "status": "Active",
+    "member_since": "2023-02-27",
+    "email": "drew.king33@example.test",
+    "phone": "(555) 232-1032",
+    "mailing_city": "Washington",
+    "mailing_state": "DC",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1644",
+        "status": "Active",
+        "current_balance": 5684.75,
+        "available_balance": 5526.97,
+        "last_activity": "2026-07-31"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5336",
+        "status": "Active",
+        "current_balance": 3111.38,
+        "available_balance": 3071.32,
+        "last_activity": "2026-08-09"
+      }
+    }
+  },
+  {
+    "member_id": "10851",
+    "name": "Parker Green",
+    "status": "Active",
+    "member_since": "2008-01-10",
+    "email": "parker.green34@example.test",
+    "phone": "(555) 233-1033",
+    "mailing_city": "Pittsburgh",
+    "mailing_state": "PA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1661",
+        "status": "Active",
+        "current_balance": 6940.62,
+        "available_balance": 6922.91,
+        "last_activity": "2026-07-30"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5359",
+        "status": "Active",
+        "current_balance": 3835.16,
+        "available_balance": 3793.51,
+        "last_activity": "2026-08-07"
+      }
+    }
+  },
+  {
+    "member_id": "30926",
+    "name": "Quinn Patel",
+    "status": "Active",
+    "member_since": "2008-07-01",
+    "email": "quinn.patel35@example.test",
+    "phone": "(555) 234-1034",
+    "mailing_city": "Raleigh",
+    "mailing_state": "NC",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1678",
+        "status": "Active",
+        "current_balance": 7735.67,
+        "available_balance": 7702.59,
+        "last_activity": "2026-07-29"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5382",
+        "status": "Active",
+        "current_balance": 4128.73,
+        "available_balance": 3965.02,
+        "last_activity": "2026-08-05"
+      }
+    }
+  },
+  {
+    "member_id": "65392",
+    "name": "Reese Garcia",
+    "status": "Active",
+    "member_since": "2008-12-21",
+    "email": "reese.garcia36@example.test",
+    "phone": "(555) 235-1035",
+    "mailing_city": "Austin",
+    "mailing_state": "TX",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1695",
+        "status": "Active",
+        "current_balance": 8599.97,
+        "available_balance": 8403.82,
+        "last_activity": "2026-07-28"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5405",
+        "status": "Active",
+        "current_balance": 4693.45,
+        "available_balance": 4552.14,
+        "last_activity": "2026-08-03"
+      }
+    }
+  },
+  {
+    "member_id": "54597",
+    "name": "Skyler Davis",
+    "status": "Active",
+    "member_since": "2009-06-12",
+    "email": "skyler.davis37@example.test",
+    "phone": "(555) 236-1036",
+    "mailing_city": "San Jose",
+    "mailing_state": "CA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1712",
+        "status": "Active",
+        "current_balance": 9322.92,
+        "available_balance": 9215.16,
+        "last_activity": "2026-08-14"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5428",
+        "status": "Active",
+        "current_balance": 5067.92,
+        "available_balance": 4993.79,
+        "last_activity": "2026-08-01"
+      }
+    }
+  },
+  {
+    "member_id": "46421",
+    "name": "Hayden Anderson",
+    "status": "Active",
+    "member_since": "2009-12-02",
+    "email": "hayden.anderson38@example.test",
+    "phone": "(555) 237-1037",
+    "mailing_city": "Chicago",
+    "mailing_state": "IL",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1729",
+        "status": "Active",
+        "current_balance": 10374.5,
+        "available_balance": 10206.16,
+        "last_activity": "2026-08-13"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5451",
+        "status": "Active",
+        "current_balance": 5744.75,
+        "available_balance": 5572.52,
+        "last_activity": "2026-07-30"
+      }
+    }
+  },
+  {
+    "member_id": "30379",
+    "name": "Emerson Jackson",
+    "status": "Active",
+    "member_since": "2010-05-24",
+    "email": "emerson.jackson39@example.test",
+    "phone": "(555) 238-1038",
+    "mailing_city": "Atlanta",
+    "mailing_state": "GA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1746",
+        "status": "Active",
+        "current_balance": 11103.47,
+        "available_balance": 11018.64,
+        "last_activity": "2026-08-12"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5474",
+        "status": "Active",
+        "current_balance": 6134.01,
+        "available_balance": 5983.22,
+        "last_activity": "2026-07-28"
+      }
+    }
+  },
+  {
+    "member_id": "38221",
+    "name": "Rowan Lewis",
+    "status": "Active",
+    "member_since": "2010-11-13",
+    "email": "rowan.lewis40@example.test",
+    "phone": "(555) 239-1039",
+    "mailing_city": "Boston",
+    "mailing_state": "MA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1763",
+        "status": "Active",
+        "current_balance": 12091.86,
+        "available_balance": 11979.71,
+        "last_activity": "2026-08-11"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5497",
+        "status": "Active",
+        "current_balance": 6557.47,
+        "available_balance": 6483.64,
+        "last_activity": "2026-07-26"
+      }
+    }
+  },
+  {
+    "member_id": "54118",
+    "name": "Finley Hall",
+    "status": "Active",
+    "member_since": "2011-05-05",
+    "email": "finley.hall41@example.test",
+    "phone": "(555) 240-1040",
+    "mailing_city": "Rockville",
+    "mailing_state": "MD",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1780",
+        "status": "Active",
+        "current_balance": 13020.07,
+        "available_balance": 12789.25,
+        "last_activity": "2026-08-10"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5520",
+        "status": "Active",
+        "current_balance": 7062.54,
+        "available_balance": 6984.99,
+        "last_activity": "2026-08-13"
+      }
+    }
+  },
+  {
+    "member_id": "23396",
+    "name": "Dakota Scott",
+    "status": "Restricted",
+    "member_since": "2011-10-25",
+    "email": "dakota.scott42@example.test",
+    "phone": "(555) 241-1041",
+    "mailing_city": "Arlington",
+    "mailing_state": "VA",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1797",
+        "status": "Active",
+        "current_balance": 14224.74,
+        "available_balance": 14212.09,
+        "last_activity": "2026-08-09"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5543",
+        "status": "Active",
+        "current_balance": 7639.89,
+        "available_balance": 7465.02,
+        "last_activity": "2026-08-11"
+      }
+    }
+  },
+  {
+    "member_id": "22156",
+    "name": "Blake Nguyen",
+    "status": "Active",
+    "member_since": "2012-04-15",
+    "email": "blake.nguyen43@example.test",
+    "phone": "(555) 242-1042",
+    "mailing_city": "Washington",
+    "mailing_state": "DC",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1814",
+        "status": "Active",
+        "current_balance": 15125.35,
+        "available_balance": 14893.76,
+        "last_activity": "2026-08-08"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5566",
+        "status": "Active",
+        "current_balance": 8252.68,
+        "available_balance": 8104.16,
+        "last_activity": "2026-08-09"
+      }
+    }
+  },
+  {
+    "member_id": "59797",
+    "name": "Logan Williams",
+    "status": "Active",
+    "member_since": "2012-10-05",
+    "email": "logan.williams44@example.test",
+    "phone": "(555) 243-1043",
+    "mailing_city": "Pittsburgh",
+    "mailing_state": "PA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1831",
+        "status": "Active",
+        "current_balance": 15703.77,
+        "available_balance": 15650.33,
+        "last_activity": "2026-08-07"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5589",
+        "status": "Active",
+        "current_balance": 8594.86,
+        "available_balance": 8524.68,
+        "last_activity": "2026-08-07"
+      }
+    }
+  },
+  {
+    "member_id": "22676",
+    "name": "Harper Brown",
+    "status": "Active",
+    "member_since": "2013-03-27",
+    "email": "harper.brown45@example.test",
+    "phone": "(555) 244-1044",
+    "mailing_city": "Raleigh",
+    "mailing_state": "NC",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1848",
+        "status": "Active",
+        "current_balance": 16563.2,
+        "available_balance": 16316.87,
+        "last_activity": "2026-08-06"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5612",
+        "status": "Active",
+        "current_balance": 9050.05,
+        "available_balance": 9003.64,
+        "last_activity": "2026-08-05"
+      }
+    }
+  },
+  {
+    "member_id": "57052",
+    "name": "Mason Wilson",
+    "status": "Active",
+    "member_since": "2013-09-16",
+    "email": "mason.wilson46@example.test",
+    "phone": "(555) 245-1045",
+    "mailing_city": "Austin",
+    "mailing_state": "TX",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1865",
+        "status": "Active",
+        "current_balance": 17839.19,
+        "available_balance": 17733.44,
+        "last_activity": "2026-08-05"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5635",
+        "status": "Active",
+        "current_balance": 9560.05,
+        "available_balance": 9392.52,
+        "last_activity": "2026-08-03"
+      }
+    }
+  },
+  {
+    "member_id": "55082",
+    "name": "Nora Moore",
+    "status": "Active",
+    "member_since": "2014-03-08",
+    "email": "nora.moore47@example.test",
+    "phone": "(555) 246-1046",
+    "mailing_city": "San Jose",
+    "mailing_state": "CA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1882",
+        "status": "Active",
+        "current_balance": 18858.13,
+        "available_balance": 18678.53,
+        "last_activity": "2026-08-04"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5658",
+        "status": "Active",
+        "current_balance": 10077.47,
+        "available_balance": 10050.38,
+        "last_activity": "2026-08-01"
+      }
+    }
+  },
+  {
+    "member_id": "89131",
+    "name": "Ethan Clark",
+    "status": "Active",
+    "member_since": "2014-08-28",
+    "email": "ethan.clark48@example.test",
+    "phone": "(555) 247-1047",
+    "mailing_city": "Chicago",
+    "mailing_state": "IL",
+    "relationship_tier": "Premier",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1899",
+        "status": "Active",
+        "current_balance": 19422.04,
+        "available_balance": 19277.24,
+        "last_activity": "2026-08-03"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5681",
+        "status": "Active",
+        "current_balance": 10688.54,
+        "available_balance": 10593.66,
+        "last_activity": "2026-07-30"
+      }
+    }
+  },
+  {
+    "member_id": "44671",
+    "name": "Maya Allen",
+    "status": "Active",
+    "member_since": "2015-02-17",
+    "email": "maya.allen49@example.test",
+    "phone": "(555) 248-1048",
+    "mailing_city": "Atlanta",
+    "mailing_state": "GA",
+    "relationship_tier": "Standard",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1916",
+        "status": "Active",
+        "current_balance": 20560.95,
+        "available_balance": 20414.91,
+        "last_activity": "2026-08-02"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5704",
+        "status": "Active",
+        "current_balance": 10902.27,
+        "available_balance": 10814.27,
+        "last_activity": "2026-07-28"
+      }
+    }
+  },
+  {
+    "member_id": "15695",
+    "name": "Liam Wright",
+    "status": "Active",
+    "member_since": "2015-08-09",
+    "email": "liam.wright50@example.test",
+    "phone": "(555) 249-1049",
+    "mailing_city": "Boston",
+    "mailing_state": "MA",
+    "relationship_tier": "Plus",
+    "accounts": {
+      "savings": {
+        "type_code": "SAV",
+        "suffix": "01",
+        "description": "Regular Savings",
+        "masked_account": "****1933",
+        "status": "Active",
+        "current_balance": 21526.59,
+        "available_balance": 21286.4,
+        "last_activity": "2026-08-01"
+      },
+      "checking": {
+        "type_code": "DDA",
+        "suffix": "10",
+        "description": "Everyday Checking",
+        "masked_account": "****5727",
+        "status": "Active",
+        "current_balance": 11419.54,
+        "available_balance": 11405.52,
+        "last_activity": "2026-07-26"
+      }
+    }
+  }
+]

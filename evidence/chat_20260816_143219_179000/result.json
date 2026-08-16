@@ -1,0 +1,6 @@
+{
+  "status": "unsupported",
+  "message": "That operation isn't available as an approved capability.",
+  "missing_arguments": [],
+  "reason_code": "NO_MATCHING_CAPABILITY"
+}
