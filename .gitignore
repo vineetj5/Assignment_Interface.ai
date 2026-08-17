@@ -8,3 +8,5 @@ __pycache__/
 artifacts/generated/
 evidence/runtime/
 evidence/handoff_*/
+evidence/chat_*/
+evidence/replay_*/

@@ -214,3 +214,40 @@ async def test_clarify_short_follow_up_with_complete_args_invokes(tmp_path):
     assert first.status == ChatResponseStatus.NEEDS_INPUT
     assert second.status == ChatResponseStatus.SUCCESS
     assert replay.calls == [("lookup_balance", {"member_id": "76821", "account_type": "checking"})]
+
+
+@pytest.mark.asyncio
+async def test_short_follow_up_recovers_from_messy_llm_arguments(tmp_path):
+    routing_client = FakeRoutingClient([
+        {
+            "status": "clarify",
+            "capability": "lookup_balance",
+            "arguments": {"member_id": "12345"},
+            "missing_arguments": ["account_type"],
+            "clarification_question": "What type of account would you like to check the balance for, savings or checking?",
+            "reason_code": None,
+        },
+        {
+            "status": "invoke",
+            "capability": "lookup_balance",
+            "arguments": {"account_type": "savings account", "member": "12345"},
+            "missing_arguments": [],
+            "clarification_question": None,
+            "reason_code": None,
+        },
+    ])
+    router = CapabilityRouter(client=routing_client, use_llm=True)
+    replay = FakeReplayEngine()
+    service = ChatService(
+        router=router,
+        replay_engine=replay,
+        session_store=ChatSessionStore(),
+        evidence_dir=tmp_path,
+    )
+
+    first = await service.handle_message("s1", "Look up member 12345 and read their balance")
+    second = await service.handle_message("s1", "savings")
+
+    assert first.status == ChatResponseStatus.NEEDS_INPUT
+    assert second.status == ChatResponseStatus.SUCCESS
+    assert replay.calls == [("lookup_balance", {"member_id": "12345", "account_type": "savings"})]

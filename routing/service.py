@@ -161,29 +161,45 @@ class ChatService:
         if not state.pending_capability:
             return decision
 
-        capability = decision.capability or state.pending_capability
-        if capability != state.pending_capability:
+        cap = self.catalog.get(state.pending_capability)
+        if not cap:
             return decision
 
-        if decision.status == RoutingStatus.UNSUPPORTED:
-            cap = self.catalog.get(state.pending_capability)
-            extracted = {}
-            if cap and hasattr(self.router, "_extract_arguments"):
-                extracted = self.router._extract_arguments(message.lower(), cap)
-            if not any(name in extracted for name in state.missing_arguments):
+        extracted = {}
+        if hasattr(self.router, "_extract_arguments"):
+            extracted = self.router._extract_arguments(message.lower(), cap)
+        declared = {spec.name for spec in cap.inputs}
+        cleaned_decision_args = {
+            name: value for name, value in decision.arguments.items() if name in declared
+        }
+
+        fills_pending_slot = any(name in extracted or name in cleaned_decision_args for name in state.missing_arguments)
+        capability = decision.capability or state.pending_capability
+        short_follow_up = len(message.split()) <= 4
+        if capability != state.pending_capability:
+            if not (short_follow_up and fills_pending_slot):
                 return decision
-            decision = RoutingDecision(
-                status=RoutingStatus.INVOKE,
-                capability=state.pending_capability,
-                arguments=extracted,
-            )
+
+        if decision.status == RoutingStatus.UNSUPPORTED and not fills_pending_slot:
+            return decision
 
         merged = dict(state.collected_arguments)
-        merged.update(decision.arguments)
-        return decision.model_copy(update={
-            "capability": capability,
-            "arguments": merged,
-        })
+        merged.update(cleaned_decision_args)
+        merged.update(extracted)
+
+        still_missing = [
+            spec.name for spec in cap.inputs
+            if spec.required and spec.name not in merged
+        ]
+        status = RoutingStatus.CLARIFY if still_missing else RoutingStatus.INVOKE
+        return RoutingDecision(
+            status=status,
+            capability=state.pending_capability,
+            arguments=merged,
+            missing_arguments=still_missing,
+            clarification_question=decision.clarification_question,
+            reason_code=decision.reason_code,
+        )
 
     def _record_decision(self, recorder: RoutingRecorder, decision: RoutingDecision) -> None:
         sensitive = set()
