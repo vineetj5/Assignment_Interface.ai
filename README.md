@@ -10,11 +10,13 @@ The system starts with an LLM-driven discovery run, compiles the observed behavi
 
 ## Demo Video
 
-A short app demo is included in the repository:
+Short app demos are included in the repository:
 
 [video1761494673.mp4](video1761494673.mp4)
 
-It shows the local app experience and the balance-lookup automation flow from the user-facing demo surface.
+[video1540829306.mp4](video1540829306.mp4)
+
+These recordings show the local app experience and the balance-lookup automation flow from the user-facing demo surface.
 
 ## What Is Included
 
