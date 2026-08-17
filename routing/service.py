@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Optional
 from capability.repository import ArtifactRepository
@@ -61,7 +62,11 @@ class ChatService:
         })
 
         try:
-            decision = await self.router.route(message=message, capabilities=capabilities, session_state=state)
+            decision = None
+            if self.router.client is None:
+                decision = self._short_pending_follow_up_decision(state, message)
+            if decision is None:
+                decision = await self.router.route(message=message, capabilities=capabilities, session_state=state)
             decision = self._merge_pending_arguments(decision, state, message)
             validated = self.validator.validate(decision)
         except RouterClientError:
@@ -156,6 +161,41 @@ class ChatService:
             return await self.replay_engine.execute(artifact, inputs=decision.arguments)
         return await self.replay_engine.execute_capability(name=decision.capability, inputs=decision.arguments)
 
+    def _short_pending_follow_up_decision(self, state, message: str) -> Optional[RoutingDecision]:
+        """Complete a pending clarification when the user gives a short answer."""
+        if not state.pending_capability or not state.missing_arguments:
+            return None
+
+        cap = self.catalog.get(state.pending_capability)
+        if not cap:
+            return None
+
+        normalized = message.lower().strip()
+        tokens = re.findall(r"[a-z0-9_]+", normalized)
+        if not tokens or len(tokens) > 4:
+            return None
+        if self._looks_like_new_query(normalized, tokens):
+            return None
+
+        extracted = self._extract_capability_arguments(normalized, cap)
+        if not any(name in extracted for name in state.missing_arguments):
+            return None
+
+        merged = dict(state.collected_arguments)
+        merged.update(extracted)
+        still_missing = [
+            spec.name for spec in cap.inputs
+            if spec.required and spec.name not in merged
+        ]
+        return RoutingDecision(
+            status=RoutingStatus.CLARIFY if still_missing else RoutingStatus.INVOKE,
+            capability=state.pending_capability,
+            arguments=merged,
+            missing_arguments=still_missing,
+            clarification_question=None,
+            reason_code=None,
+        )
+
     def _merge_pending_arguments(self, decision: RoutingDecision, state, message: str) -> RoutingDecision:
         """Merge collected pending args into a follow-up routing decision before validation."""
         if not state.pending_capability:
@@ -165,9 +205,7 @@ class ChatService:
         if not cap:
             return decision
 
-        extracted = {}
-        if hasattr(self.router, "_extract_arguments"):
-            extracted = self.router._extract_arguments(message.lower(), cap)
+        extracted = self._extract_capability_arguments(message.lower(), cap)
         declared = {spec.name for spec in cap.inputs}
         cleaned_decision_args = {
             name: value for name, value in decision.arguments.items() if name in declared
@@ -200,6 +238,33 @@ class ChatService:
             clarification_question=decision.clarification_question,
             reason_code=decision.reason_code,
         )
+
+    def _extract_capability_arguments(self, normalized_message: str, capability) -> dict:
+        if hasattr(self.router, "_extract_arguments"):
+            return self.router._extract_arguments(normalized_message, capability)
+        return {}
+
+    def _looks_like_new_query(self, normalized_message: str, tokens: list[str]) -> bool:
+        account_answer_tokens = {"checking", "saving", "savings", "account", "acct", "type"}
+        if tokens and all(token in account_answer_tokens for token in tokens):
+            return False
+
+        new_query_tokens = {
+            "what",
+            "which",
+            "who",
+            "lookup",
+            "look",
+            "find",
+            "member",
+            "balance",
+            "transfer",
+            "wire",
+            "freeze",
+            "open",
+            "close",
+        }
+        return "?" in normalized_message or any(token in new_query_tokens for token in tokens)
 
     def _record_decision(self, recorder: RoutingRecorder, decision: RoutingDecision) -> None:
         sensitive = set()

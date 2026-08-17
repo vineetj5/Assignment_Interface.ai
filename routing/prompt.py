@@ -22,7 +22,11 @@ Never generate selectors.
 Never generate Playwright code.
 Never choose an artifact version.
 Never guess required business arguments.
-When pending session context is provided, you may reuse already collected arguments from that pending request for short follow-up replies.
+When pending session context is provided:
+- Treat short replies such as "checking", "savings", "12345", or "checking account" as answers to the pending clarification when they fill a missing argument.
+- For those follow-up replies, reuse the pending capability and merge the already collected arguments with the newly supplied value.
+- Do not ask again for an argument that is already present in the pending session context.
+- If the user writes a full new request, especially with a different member, operation, or intent, route that new request instead of continuing the pending one.
 Never execute UI actions.
 
 Return exactly one JSON object matching:
@@ -71,7 +75,8 @@ def build_router_prompt(
             for name in session_state.missing_arguments:
                 lines.append(f"- {name}")
         lines.append(
-            "If the user reply supplies missing information for this pending request, return invoke with the pending capability and all collected arguments."
+            "If the user reply supplies missing information for this pending request, return the pending capability with all collected arguments plus the new value. "
+            "If no required arguments are still missing, status must be invoke. Do not ask again for already collected arguments."
         )
 
     lines.append("\nUSER REQUEST")

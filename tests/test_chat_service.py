@@ -65,6 +65,30 @@ async def test_chat_service_clarifies_and_completes_multi_turn(tmp_path):
 
 
 @pytest.mark.asyncio
+async def test_live_llm_short_follow_up_completes_pending_lookup_without_second_route(tmp_path):
+    fake = FakeReplayEngine()
+    store = ChatSessionStore()
+    state = store.get("s1")
+    state.pending_capability = "lookup_balance"
+    state.collected_arguments = {"member_id": "76821"}
+    state.missing_arguments = ["account_type"]
+    store.save(state)
+    router = CapabilityRouter(use_llm=True)
+    service = ChatService(
+        router=router,
+        replay_engine=fake,
+        session_store=store,
+        evidence_dir=tmp_path,
+    )
+
+    response = await service.handle_message("s1", "checking")
+
+    assert response.status == ChatResponseStatus.SUCCESS
+    assert router.routing_llm_calls == 0
+    assert fake.calls == [("lookup_balance", {"member_id": "76821", "account_type": "checking"})]
+
+
+@pytest.mark.asyncio
 async def test_chat_service_rejects_unsupported_without_replay(tmp_path):
     fake = FakeReplayEngine()
     service = ChatService(replay_engine=fake, session_store=ChatSessionStore(), evidence_dir=tmp_path)
