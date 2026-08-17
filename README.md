@@ -196,7 +196,7 @@ The unit and integration-style tests cover the main risk areas of the project: t
 At the time of this submission, the full suite passes:
 
 ```text
-127 passed
+130 passed
 ```
 
 ## Repository Notes
